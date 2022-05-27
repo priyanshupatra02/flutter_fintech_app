@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50.325" height="46.36" viewBox="0 0 50.325 46.36">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_513" data-name="Group 513" transform="translate(-5.837)">
+    <g id="Light" transform="translate(-15 -31.04)">
+      <rect id="Rectangle_1606" data-name="Rectangle 1606" width="35" height="2" rx="1" transform="translate(27.5 31.04)" fill="#fff"/>
+      <path id="Path_1078" data-name="Path 1078" d="M45.638,47,38.044,91.36H88.369L79,47Z" transform="translate(-17.207 -13.96)" opacity="0.5" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="ban-sign" transform="translate(20 20)" opacity="0.5">
+      <path id="Path_1075" data-name="Path 1075" d="M10.868,0A10.868,10.868,0,1,1,0,10.868,10.869,10.869,0,0,1,10.868,0Zm6.556,6.553L6.554,17.423a7.848,7.848,0,0,0,10.87-10.87ZM4.312,15.182l10.87-10.87a7.848,7.848,0,0,0-10.87,10.87Z" fill="#fff" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>
