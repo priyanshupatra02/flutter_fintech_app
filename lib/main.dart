@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           systemOverlayStyle: SystemUiOverlayStyle.light, // 2
         ),
-        useMaterial3: true,
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: kPrimaryBgColor,
       ),

@@ -13,6 +13,7 @@ Color kPageIndicator = Colors.grey.shade800;
 
 // Shadow Colors
 const Color kShadowPrimaryDeep = Color(0xFF151515);
+const Color kShadowPrimaryLight = Color(0xFF224ABB);
 
 // Message colors
 const Color kSuccessColor = Color(0xFF00BA39);
@@ -24,7 +25,10 @@ const Color kErrorColor = Color(0xFFFF4B4B);
 const LinearGradient kPrimaryDarkGradientColor = LinearGradient(
   begin: Alignment.topLeft,
   end: Alignment.bottomRight,
-  colors: [Color(0xFF000000), Color(0xFF484848)],
+  colors: [
+    Color(0xFF000000),
+    Color(0xFF484848),
+  ],
 ); // for debit cards & list tiles
 
 const LinearGradient kSecondaryGradientColor = LinearGradient(
@@ -83,7 +87,7 @@ TextStyle onboardingHintText = GoogleFonts.poppins(
 );
 
 TextStyle buttonText = GoogleFonts.poppins(
-  fontSize: getDeviceWidth(19),
+  fontSize: getDeviceWidth(18),
   fontWeight: FontWeight.bold,
   color: kPrimaryTextColor,
 );
@@ -144,6 +148,8 @@ EdgeInsetsGeometry kQuatHalfPad = EdgeInsets.all(getDeviceWidth(15));
 EdgeInsetsGeometry kSinglePad = EdgeInsets.all(getDeviceWidth(20));
 EdgeInsetsGeometry kSingleMiddlePad = EdgeInsets.all(getDeviceWidth(25));
 EdgeInsetsGeometry kDoublePad = EdgeInsets.all(getDeviceWidth(40));
+EdgeInsetsGeometry kDoubleMiddlePad = EdgeInsets.all(getDeviceWidth(45));
+EdgeInsetsGeometry kTriplePad = EdgeInsets.all(getDeviceWidth(60));
 
 // EdgeInsets.Symmetric -> Horizontal Padding Constants on this Project
 EdgeInsetsGeometry kQuatHorizontal =
@@ -167,7 +173,7 @@ EdgeInsetsGeometry kQuatVertical =
 EdgeInsetsGeometry kHalfVertical =
     EdgeInsets.symmetric(vertical: getDeviceWidth(10));
 EdgeInsetsGeometry kHalfMiddleVertical =
-    EdgeInsets.symmetric(vertical: getDeviceWidth(10));
+    EdgeInsets.symmetric(vertical: getDeviceWidth(15));
 EdgeInsetsGeometry kSingleVertical =
     EdgeInsets.symmetric(vertical: getDeviceWidth(20));
 EdgeInsetsGeometry kSingleMiddleVertical =
@@ -176,6 +182,15 @@ EdgeInsetsGeometry kDoubleVertical =
     EdgeInsets.symmetric(vertical: getDeviceWidth(40));
 EdgeInsetsGeometry kDoubleMiddleVertical =
     EdgeInsets.symmetric(vertical: getDeviceWidth(45));
+
+// Radius Constant For container
+BorderRadiusGeometry kQuatCurve = BorderRadius.circular(getDeviceWidth(5));
+BorderRadiusGeometry kHalfCurve = BorderRadius.circular(getDeviceWidth(10));
+BorderRadiusGeometry kHalfMiddleCurve =
+    BorderRadius.circular(getDeviceWidth(15));
+BorderRadiusGeometry kFullCurve = BorderRadius.circular(getDeviceWidth(20));
+BorderRadiusGeometry kFullMiddleCurve =
+    BorderRadius.circular(getDeviceWidth(25));
 
 // Form Error
 // final RegExp emailValidatorRegExp =
