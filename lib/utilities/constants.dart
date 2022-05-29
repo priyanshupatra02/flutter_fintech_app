@@ -10,6 +10,7 @@ const Color kIconBgColor = Color(0xFF222121);
 const Color kTileColor = Color(0xFF3D3C3C);
 const Color kBorderColor = Color(0xFFFF006F);
 Color kPageIndicator = Colors.grey.shade800;
+Color bottomNavBarColor = const Color(0xFF000000).withOpacity(0.3);
 
 // Shadow Colors
 const Color kShadowPrimaryDeep = Color(0xFF151515);

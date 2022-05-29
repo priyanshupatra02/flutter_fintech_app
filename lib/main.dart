@@ -1,6 +1,9 @@
 import 'package:flutter_fintech_app/utilities/import.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle.light,
+  ); // For making status bar items colors as light as the app is in dark mode.
   runApp(const MyApp());
 }
 
@@ -14,11 +17,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Fintech App',
       theme: ThemeData(
-        bottomSheetTheme: BottomSheetThemeData(
+        splashColor: Colors.transparent,
+        bottomSheetTheme: const BottomSheetThemeData(
           backgroundColor: Colors.transparent,
-        ),
-        appBarTheme: const AppBarTheme(
-          systemOverlayStyle: SystemUiOverlayStyle.light, // 2
         ),
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: kPrimaryBgColor,
@@ -42,7 +43,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-      body: OnboardingScreen(),
+      // body: Home(),
+      bottomNavigationBar: BuildBottomNavigationBar(),
     );
   }
 }
+
+// OnboardingScreen()
+// 
