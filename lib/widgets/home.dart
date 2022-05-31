@@ -8,9 +8,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int selectedIndex = 0;
+  int index = 0;
   PageController pageController = PageController(initialPage: 0);
-
   @override
   void dispose() {
     pageController.dispose();
@@ -32,21 +31,70 @@ class _HomeState extends State<Home> {
           MonitoringPage(),
         ],
       ),
-      bottomNavigationBar: Padding(
-        padding: kSingleMiddleVertical,
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Container(
-              width: getDeviceWidth(320),
-              height: getDeviceHeight(60),
-              decoration: BoxDecoration(
-                color: bottomNavBarColor,
-                borderRadius: kHalfCurve,
+      bottomNavigationBar: NavigationBarTheme(
+        data: const NavigationBarThemeData(
+          indicatorColor: Colors.transparent,
+        ),
+        child: NavigationBar(
+          height: getDeviceHeight(75),
+          backgroundColor: bottomNavBarColor,
+          labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
+          selectedIndex: index,
+          onDestinationSelected: (index) {
+            setState(() {
+              this.index = index;
+            });
+            pageController.animateToPage(
+              index,
+              duration: const Duration(milliseconds: 500),
+              curve: Curves.easeOutQuad,
+            );
+          },
+          destinations: [
+            NavigationDestination(
+              icon: SvgPicture.asset(
+                "assets/icons/unselected/home-unselected.svg",
               ),
-              child: Row(
-                children: [],
+              selectedIcon: SvgPicture.asset(
+                "assets/icons/selected/home-selected.svg",
               ),
+              label: "Home",
+            ),
+            NavigationDestination(
+              icon: SvgPicture.asset(
+                "assets/icons/unselected/pay-unselected.svg",
+              ),
+              selectedIcon: SvgPicture.asset(
+                "assets/icons/selected/pay-selected.svg",
+              ),
+              label: "Pay",
+            ),
+            NavigationDestination(
+              icon: SvgPicture.asset(
+                "assets/icons/unselected/investment-unselected.svg",
+              ),
+              selectedIcon: SvgPicture.asset(
+                "assets/icons/selected/investment-selected.svg",
+              ),
+              label: "Investment",
+            ),
+            NavigationDestination(
+              icon: SvgPicture.asset(
+                "assets/icons/unselected/cards-unselected.svg",
+              ),
+              selectedIcon: SvgPicture.asset(
+                "assets/icons/selected/cards-selected.svg",
+              ),
+              label: "Cards",
+            ),
+            NavigationDestination(
+              icon: SvgPicture.asset(
+                "assets/icons/unselected/monitoring-unselected.svg",
+              ),
+              selectedIcon: SvgPicture.asset(
+                "assets/icons/selected/monitoring-selected.svg",
+              ),
+              label: "Monitor",
             ),
           ],
         ),

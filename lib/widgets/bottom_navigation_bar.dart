@@ -56,65 +56,45 @@ class _BuildBottomNavigationBarState extends State<BuildBottomNavigationBar> {
             NavigationDestination(
               icon: SvgPicture.asset(
                 "assets/icons/unselected/home-unselected.svg",
-                height: getDeviceHeight(25),
-                width: getDeviceWidth(25),
               ),
               selectedIcon: SvgPicture.asset(
                 "assets/icons/selected/home-selected.svg",
-                height: getDeviceHeight(25),
-                width: getDeviceWidth(25),
               ),
               label: "Home",
             ),
             NavigationDestination(
               icon: SvgPicture.asset(
                 "assets/icons/unselected/pay-unselected.svg",
-                height: getDeviceHeight(25),
-                width: getDeviceWidth(25),
               ),
               selectedIcon: SvgPicture.asset(
                 "assets/icons/selected/pay-selected.svg",
-                height: getDeviceHeight(25),
-                width: getDeviceWidth(25),
               ),
               label: "Pay",
             ),
             NavigationDestination(
               icon: SvgPicture.asset(
                 "assets/icons/unselected/investment-unselected.svg",
-                height: getDeviceHeight(25),
-                width: getDeviceWidth(25),
               ),
               selectedIcon: SvgPicture.asset(
                 "assets/icons/selected/investment-selected.svg",
-                height: getDeviceHeight(25),
-                width: getDeviceWidth(25),
               ),
               label: "Investment",
             ),
             NavigationDestination(
               icon: SvgPicture.asset(
                 "assets/icons/unselected/cards-unselected.svg",
-                height: getDeviceHeight(25),
-                width: getDeviceWidth(25),
               ),
               selectedIcon: SvgPicture.asset(
                 "assets/icons/selected/cards-selected.svg",
-                height: getDeviceHeight(25),
-                width: getDeviceWidth(25),
               ),
               label: "Cards",
             ),
             NavigationDestination(
               icon: SvgPicture.asset(
                 "assets/icons/unselected/monitoring-unselected.svg",
-                height: getDeviceHeight(25),
-                width: getDeviceWidth(25),
               ),
               selectedIcon: SvgPicture.asset(
                 "assets/icons/selected/monitoring-selected.svg",
-                height: getDeviceHeight(25),
-                width: getDeviceWidth(25),
               ),
               label: "Monitor",
             ),

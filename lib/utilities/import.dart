@@ -18,6 +18,7 @@ export 'package:provider/provider.dart';
 export 'package:flutter_fintech_app/main.dart';
 export 'package:flutter_fintech_app/screens/onboarding_screen/onboarding.dart';
 export 'package:flutter_fintech_app/screens/homepage/homepage.dart';
+
 // nav bar destinations
 export 'package:flutter_fintech_app/screens/cards/cards.dart';
 export 'package:flutter_fintech_app/screens/investment/investment_page.dart';
@@ -26,6 +27,7 @@ export 'package:flutter_fintech_app/screens/pay/pay_page.dart';
 
 // Custom widgets
 export 'package:flutter_fintech_app/widgets/action_button.dart';
+
 export 'package:flutter_fintech_app/widgets/onboarding_pages.dart';
 export 'package:flutter_fintech_app/widgets/bottom_navigation_bar.dart';
 export 'package:flutter_fintech_app/widgets/home.dart'; // on connecting to firebase, it will help us tp check for snapshots.

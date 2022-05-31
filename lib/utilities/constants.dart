@@ -2,7 +2,7 @@ import 'package:flutter_fintech_app/utilities/import.dart';
 
 // Normal Color
 const Color kPrimaryBgColor = Color(0xFF212121);
-const Color kPrimaryLightColor = Color(0xFF2E2E2E); // For appBar & stuffs.
+const Color kAppBarColor = Color(0xFF2E2E2E); // For appBar & stuffs.
 const Color kSecondaryColor = Color(0xFFFFFFFF);
 const Color kSecondaryLightColor = Color(0xFF585757); // For bottom modal sheet.
 const Color kIconColor = Color(0xFF959595);
