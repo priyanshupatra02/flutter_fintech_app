@@ -17,11 +17,7 @@ class _HomePageState extends State<HomePage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SvgPicture.asset("assets/icons/wallet.svg"),
-          SizedBox(
-            child: Column(
-              children: [Text("data")],
-            ),
-          ),
+          Text("wallet balance"),
         ],
       ),
     );

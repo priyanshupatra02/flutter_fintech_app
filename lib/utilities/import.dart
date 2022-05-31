@@ -27,7 +27,5 @@ export 'package:flutter_fintech_app/screens/pay/pay_page.dart';
 
 // Custom widgets
 export 'package:flutter_fintech_app/widgets/action_button.dart';
-
 export 'package:flutter_fintech_app/widgets/onboarding_pages.dart';
-export 'package:flutter_fintech_app/widgets/bottom_navigation_bar.dart';
 export 'package:flutter_fintech_app/widgets/home.dart'; // on connecting to firebase, it will help us tp check for snapshots.
