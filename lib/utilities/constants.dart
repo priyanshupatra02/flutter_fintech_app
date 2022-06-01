@@ -1,6 +1,6 @@
 import 'package:flutter_fintech_app/utilities/import.dart';
 
-// Normal Color
+// Normal Colors
 const Color kPrimaryBgColor = Color(0xFF212121);
 const Color kAppBarColor = Color(0xFF2E2E2E); // For appBar & stuffs.
 const Color kSecondaryColor = Color(0xFFFFFFFF);
@@ -60,13 +60,19 @@ const Color kInfoTextColor = Color(0xFF83838F); // For onboarding screen texts.
 TextStyle kHeadingText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(28),
   fontWeight: FontWeight.bold,
-  color: kPrimaryTextColor,
+  // color: kPrimaryTextColor,
+);
+
+TextStyle kFavouriteNames = GoogleFonts.poppins(
+  fontSize: getDeviceWidth(9),
+  fontWeight: FontWeight.w400,
+  letterSpacing: 0.5,
 );
 
 TextStyle kSmallHeadingText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(11),
   fontWeight: FontWeight.bold,
-  color: kPrimaryTextColor,
+  // color: kPrimaryTextColor,
 );
 
 TextStyle kPrimaryInfoText = GoogleFonts.poppins(
@@ -87,23 +93,28 @@ TextStyle onboardingHintText = GoogleFonts.poppins(
   color: kPrimaryTextColor.withOpacity(0.2),
 );
 
+TextStyle categoryHeadingStyle = GoogleFonts.poppins(
+  fontSize: getDeviceWidth(18),
+  fontWeight: FontWeight.w500, //medium
+  // color: kPrimaryTextColor,
+); // for example "Settings & Preferences", "Recent Transactions" etc..
+
 TextStyle buttonText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(18),
   fontWeight: FontWeight.bold,
-  color: kPrimaryTextColor,
+  // color: kPrimaryTextColor,
 );
 
 TextStyle kAppbarTitleText = GoogleFonts.poppins(
-  fontSize: getDeviceWidth(17),
-  letterSpacing: 25,
+  fontSize: getDeviceWidth(25),
+  letterSpacing: 1.5,
   fontWeight: FontWeight.bold,
-  color: kPrimaryTextColor,
 );
 
 TextStyle listTitleText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(16),
   fontWeight: FontWeight.w600, //semi-bold
-  color: kPrimaryTextColor,
+  // color: kPrimaryTextColor,
 );
 
 TextStyle listSubtitleText = GoogleFonts.poppins(
@@ -117,14 +128,14 @@ TextStyle iconLabelText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(6),
   letterSpacing: 2,
   fontWeight: FontWeight.w600, //semi-bold
-  color: kPrimaryTextColor,
+  // color: kPrimaryTextColor,
 );
 
 TextStyle buttonTitleText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(10),
   letterSpacing: 2,
   fontWeight: FontWeight.w600, //semi-bold
-  color: kPrimaryTextColor,
+  // color: kPrimaryTextColor,
 );
 
 TextStyle buttonSubtitleText = GoogleFonts.poppins(
@@ -138,7 +149,7 @@ TextStyle chipText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(12),
   letterSpacing: 2,
   fontWeight: FontWeight.w500, //medium
-  color: kPrimaryTextColor,
+  // color: kPrimaryTextColor,
 );
 
 //padding
@@ -204,3 +215,6 @@ const String kMatchPassError = "Passwords don't match";
 const String kNamelNullError = "Please Enter your name";
 const String kPhoneNumberNullError = "Please Enter your phone number";
 const String kAddressNullError = "Please Enter your address";
+
+// symbols
+String rupee = "₹";

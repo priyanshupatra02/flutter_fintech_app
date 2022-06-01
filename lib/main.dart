@@ -17,6 +17,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Fintech App',
       theme: ThemeData(
+        // TODO: more about typographyy class in flutter
+        primaryTextTheme: Typography(platform: TargetPlatform.iOS).white,
+        textTheme: Typography(platform: TargetPlatform.iOS).white,
         splashColor: Colors.transparent,
         bottomSheetTheme: const BottomSheetThemeData(
           backgroundColor: Colors.transparent,

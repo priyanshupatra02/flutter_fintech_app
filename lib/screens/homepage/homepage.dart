@@ -8,21 +8,124 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  String walletBalance = "20,445";
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
       appBar: _buildAppBar(),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SvgPicture.asset("assets/icons/wallet.svg"),
-          Text("wallet balance"),
-        ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: kSinglePad,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              //wallet balance column
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SvgPicture.asset(
+                    "assets/icons/wallet.svg",
+                    height: getDeviceHeight(55),
+                    width: getDeviceWidth(55),
+                  ),
+                  SizedBox(height: getDeviceHeight(5)),
+                  Text(
+                    "Wallet Balance.",
+                    style: categoryHeadingStyle,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        rupee,
+                        style: GoogleFonts.poppins(
+                          fontSize: getDeviceWidth(15),
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      SizedBox(width: getDeviceWidth(5)),
+                      Text(
+                        walletBalance,
+                        style: GoogleFonts.poppins(
+                          fontSize: getDeviceWidth(25),
+                          letterSpacing: 1.5,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              SizedBox(height: getDeviceHeight(45)),
+              _buildFavoriteMenu(),
+              SizedBox(height: getDeviceHeight(45)),
+              // send/receive money columns
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  _buildPayCards(
+                    "send\nmoney",
+                    SvgPicture.asset("assets/icons/send-money.svg"),
+                  ),
+                  _buildPayCards(
+                    "receive\nmoney",
+                    SvgPicture.asset("assets/icons/receive-money.svg"),
+                  ),
+                  _buildPayCards(
+                    "add\nmoney",
+                    SvgPicture.asset("assets/icons/add-money-to-wallet.svg"),
+                  ),
+                ],
+              ),
+              SizedBox(height: getDeviceHeight(45)),
+
+              // recent transaction starts here ->
+              Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Recent Transactions",
+                        style: categoryHeadingStyle,
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: Text(
+                          "see all",
+                          style: GoogleFonts.poppins(
+                            color: kSecondaryLightTextColor,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: getDeviceHeight(15)),
+                  ListView.separated(
+                    physics: NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    itemCount: 7,
+                    itemBuilder: (context, index) {
+                      return CustomListTile();
+                    },
+                    separatorBuilder: (context, index) {
+                      return SizedBox(
+                        height: getDeviceHeight(25),
+                      );
+                    },
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
 }
+
+// custom widgets
 
 // Custom AppBar Widget
 AppBar _buildAppBar() {
@@ -48,17 +151,14 @@ AppBar _buildAppBar() {
         SizedBox(
           width: getDeviceWidth(25),
         ),
+
         // username & upi id of the user
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               "jean",
-              style: GoogleFonts.poppins(
-                fontSize: getDeviceWidth(25),
-                letterSpacing: 1.5,
-                fontWeight: FontWeight.bold,
-              ),
+              style: kAppbarTitleText,
             ),
             Row(
               children: [
@@ -103,37 +203,75 @@ AppBar _buildAppBar() {
   );
 }
 
-
-
-/**
- * actions: [
-              const CircleAvatar(
-                backgroundImage: NetworkImage(
-                  "https://images.unsplash.com/photo-1639149888905-fb39731f2e6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
+// favorite column
+Widget _buildFavoriteMenu() {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(
+        "Favourites.",
+        style: categoryHeadingStyle,
+      ),
+      SizedBox(height: getDeviceHeight(20)),
+      SizedBox(
+        height: getDeviceHeight(80),
+        child: ListView.separated(
+          scrollDirection: Axis.horizontal,
+          itemCount: 20,
+          itemBuilder: (context, index) {
+            //TODO: add a column for username
+            return Column(
+              children: [
+                CircleAvatar(
+                  radius: getDeviceWidth(25),
+                  backgroundImage: NetworkImage(
+                    "https://picsum.photos/200/300?random=$index",
+                  ),
                 ),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset(
-                  "assets/icons/qr-code-scan.svg",
+                SizedBox(height: getDeviceHeight(10)),
+                // TODO: Add usernames to the avatars
+                Text(
+                  "Names",
+                  style: kFavouriteNames,
                 ),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset(
-                  "assets/icons/notification.svg",
-                ),
-              ),
-            ],
- */
-
-/**
- * buildProfilePic{
- *  CircleAvatar(
-        radius: 40,
-        backgroundImage: NetworkImage(
-          "https://images.unsplash.com/photo-1639149888905-fb39731f2e6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
+              ],
+            );
+          },
+          separatorBuilder: (context, index) {
+            return SizedBox(width: (getDeviceWidth(15)));
+          },
         ),
       ),
- * }
-*/
+    ],
+  );
+}
+
+// send/receive money cards
+Widget _buildPayCards(String text, Widget icon) {
+  return Container(
+    padding: kQuatHalfPad,
+    width: getDeviceWidth(100),
+    height: getDeviceHeight(110),
+    decoration: BoxDecoration(
+      color: kPrimaryBgColor,
+      borderRadius: BorderRadius.circular(10),
+      boxShadow: const [
+        BoxShadow(
+          color: kShadowPrimaryDeep,
+          blurRadius: 10,
+          offset: Offset(1, 3),
+          inset: true,
+        ),
+      ],
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        icon,
+        const SizedBox(height: 10),
+        Text(text),
+      ],
+    ),
+  );
+}

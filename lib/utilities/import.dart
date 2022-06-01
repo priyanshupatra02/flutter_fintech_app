@@ -1,5 +1,5 @@
 // System packages
-export 'package:flutter/material.dart';
+export 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
 export 'package:flutter/services.dart';
 export 'package:flutter/foundation.dart';
 
@@ -13,6 +13,7 @@ export 'package:flutter_svg/svg.dart';
 export 'package:lottie/lottie.dart';
 export 'package:smooth_page_indicator/smooth_page_indicator.dart';
 export 'package:provider/provider.dart';
+export 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
 
 // Screens
 export 'package:flutter_fintech_app/main.dart';
@@ -29,3 +30,5 @@ export 'package:flutter_fintech_app/screens/pay/pay_page.dart';
 export 'package:flutter_fintech_app/widgets/action_button.dart';
 export 'package:flutter_fintech_app/widgets/onboarding_pages.dart';
 export 'package:flutter_fintech_app/widgets/home.dart'; // on connecting to firebase, it will help us tp check for snapshots.
+export 'package:flutter_fintech_app/widgets/custom_list_tile.dart';
+
