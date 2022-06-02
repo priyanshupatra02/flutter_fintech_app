@@ -23,13 +23,14 @@ const Color kErrorColor = Color(0xFFFF4B4B);
 // Gradients
 // TODO: add stops
 
-const LinearGradient kPrimaryDarkGradientColor = LinearGradient(
+LinearGradient kPrimaryDarkGradientColor = LinearGradient(
   begin: Alignment.topLeft,
   end: Alignment.bottomRight,
   colors: [
-    Color(0xFF000000),
     Color(0xFF484848),
+    Color(0xFF000000).withOpacity(0.4),
   ],
+  stops: [0.002, 0.6],
 ); // for debit cards & list tiles
 
 const LinearGradient kSecondaryGradientColor = LinearGradient(
@@ -58,10 +59,10 @@ const Color kInfoTextColor = Color(0xFF83838F); // For onboarding screen texts.
 
 // Text styles
 TextStyle kHeadingText = GoogleFonts.poppins(
-  fontSize: getDeviceWidth(28),
+  fontSize: getDeviceWidth(17),
+letterSpacing: 0.5,
   fontWeight: FontWeight.bold,
-  // color: kPrimaryTextColor,
-);
+); // used for your bills, rent & education etc.
 
 TextStyle kFavouriteNames = GoogleFonts.poppins(
   fontSize: getDeviceWidth(9),
@@ -104,20 +105,34 @@ TextStyle buttonText = GoogleFonts.poppins(
 );
 
 TextStyle kAppbarTitleText = GoogleFonts.poppins(
-  fontSize: getDeviceWidth(25),
-  letterSpacing: 1.5,
+  fontSize: getDeviceWidth(17),
+  height: 1.3,
+  letterSpacing: 1,
   fontWeight: FontWeight.bold,
 );
 
-TextStyle listTitleText = GoogleFonts.poppins(
+TextStyle primaryListTitleText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(16),
   fontWeight: FontWeight.w600, //semi-bold
 );
 
-TextStyle listSubtitleText = GoogleFonts.poppins(
+TextStyle primaryListSubtitleText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(10),
   letterSpacing: 0.5,
   fontWeight: FontWeight.w400, //regular
+  color: kSecondaryLightTextColor,
+);
+
+TextStyle secondaryListTitleText = GoogleFonts.poppins(
+  fontSize: getDeviceWidth(12),
+  letterSpacing: 0.75,
+  fontWeight: FontWeight.w600, //semi-bold
+);
+
+TextStyle secondaryListSubtitleText = GoogleFonts.poppins(
+  fontSize: getDeviceWidth(10),
+  letterSpacing: 0.5,
+  fontWeight: FontWeight.w300, // light
   color: kSecondaryLightTextColor,
 );
 
@@ -140,7 +155,7 @@ TextStyle deductedMoneyText = GoogleFonts.poppins(
   color: kErrorColor,
 );
 TextStyle receivedMoneyText = GoogleFonts.poppins(
-  fontSize: getDeviceWidth(18), 
+  fontSize: getDeviceWidth(18),
   fontWeight: FontWeight.w400, //regular
   color: kSuccessColor,
 );
@@ -150,12 +165,6 @@ TextStyle buttonSubtitleText = GoogleFonts.poppins(
   letterSpacing: 2,
   fontWeight: FontWeight.w300, //light
   color: kSecondaryLightTextColor,
-);
-
-TextStyle chipText = GoogleFonts.poppins(
-  fontSize: getDeviceWidth(12),
-  letterSpacing: 2,
-  fontWeight: FontWeight.w500, //medium
 );
 
 //padding
@@ -175,7 +184,7 @@ EdgeInsetsGeometry kQuatHorizontal =
 EdgeInsetsGeometry kHalfHorizontal =
     EdgeInsets.symmetric(horizontal: getDeviceWidth(10));
 EdgeInsetsGeometry kHalfMiddleHorizontal =
-    EdgeInsets.symmetric(horizontal: getDeviceWidth(10));
+    EdgeInsets.symmetric(horizontal: getDeviceWidth(15));
 EdgeInsetsGeometry kSingleHorizontal =
     EdgeInsets.symmetric(horizontal: getDeviceWidth(20));
 EdgeInsetsGeometry kSingleMiddleHorizontal =

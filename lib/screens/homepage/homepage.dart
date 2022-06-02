@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // For border around profile pic
-            CircleAvatar(
+             CircleAvatar(
               radius: getDeviceWidth(27),
               backgroundColor: kSecondaryColor,
               child: CircleAvatar(
@@ -42,7 +42,11 @@ class _HomePageState extends State<HomePage> {
               children: [
                 Text(
                   "jean",
-                  style: kAppbarTitleText,
+                  style: GoogleFonts.poppins(
+                    fontSize: getDeviceWidth(25),
+                    letterSpacing: 1.5,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 Row(
                   children: [
@@ -180,6 +184,8 @@ class _HomePageState extends State<HomePage> {
                     itemCount: 7,
                     itemBuilder: (context, index) {
                       return CustomListTile(
+                        height: getDeviceHeight(80),
+                        width: getDeviceWidth(370),
                         icon: SvgPicture.asset("assets/social/figma-logo.svg"),
                         titleText: "Figma",
                         subtitleText: "February 1, 2022",
@@ -203,7 +209,7 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-// // favorite column
+// Favorite column
 Widget _buildFavoriteMenu() {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,

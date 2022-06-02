@@ -1,8 +1,8 @@
 import 'package:flutter_fintech_app/utilities/import.dart';
 
 class CustomListTile extends StatelessWidget {
-  final double? height;
-  final double? width;
+  final double height;
+  final double width;
   final Widget icon;
   final String titleText;
   final String subtitleText;
@@ -12,8 +12,8 @@ class CustomListTile extends StatelessWidget {
 
   const CustomListTile({
     Key? key,
-    this.height = 80,
-    this.width = 370,
+    required this.height,
+    required this.width,
     required this.icon,
     required this.titleText,
     required this.subtitleText,
@@ -26,8 +26,8 @@ class CustomListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: kHalfPad,
-      width: getDeviceWidth(370),
-      height: getDeviceHeight(80),
+      width: width,
+      height: height,
       decoration: BoxDecoration(
         color: kTileColor,
         borderRadius: kHalfCurve,
@@ -52,10 +52,10 @@ class CustomListTile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               SizedBox(
-                child: Text(titleText, style: listTitleText),
+                child: Text(titleText, style: primaryListTitleText),
               ),
               SizedBox(
-                child: Text(subtitleText, style: listSubtitleText),
+                child: Text(subtitleText, style: primaryListSubtitleText),
               ),
             ],
           ),
@@ -71,7 +71,7 @@ class CustomListTile extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                child: Text(category, style: listSubtitleText),
+                child: Text(category, style: primaryListSubtitleText),
               ),
             ],
           ),
