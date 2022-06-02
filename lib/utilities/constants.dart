@@ -96,13 +96,11 @@ TextStyle onboardingHintText = GoogleFonts.poppins(
 TextStyle categoryHeadingStyle = GoogleFonts.poppins(
   fontSize: getDeviceWidth(18),
   fontWeight: FontWeight.w500, //medium
-  // color: kPrimaryTextColor,
 ); // for example "Settings & Preferences", "Recent Transactions" etc..
 
 TextStyle buttonText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(18),
   fontWeight: FontWeight.bold,
-  // color: kPrimaryTextColor,
 );
 
 TextStyle kAppbarTitleText = GoogleFonts.poppins(
@@ -114,12 +112,11 @@ TextStyle kAppbarTitleText = GoogleFonts.poppins(
 TextStyle listTitleText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(16),
   fontWeight: FontWeight.w600, //semi-bold
-  // color: kPrimaryTextColor,
 );
 
 TextStyle listSubtitleText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(10),
-  letterSpacing: 2,
+  letterSpacing: 0.5,
   fontWeight: FontWeight.w400, //regular
   color: kSecondaryLightTextColor,
 );
@@ -135,7 +132,17 @@ TextStyle buttonTitleText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(10),
   letterSpacing: 2,
   fontWeight: FontWeight.w600, //semi-bold
-  // color: kPrimaryTextColor,
+);
+
+TextStyle deductedMoneyText = GoogleFonts.poppins(
+  fontSize: getDeviceWidth(18),
+  fontWeight: FontWeight.w400, //regular
+  color: kErrorColor,
+);
+TextStyle receivedMoneyText = GoogleFonts.poppins(
+  fontSize: getDeviceWidth(18), 
+  fontWeight: FontWeight.w400, //regular
+  color: kSuccessColor,
 );
 
 TextStyle buttonSubtitleText = GoogleFonts.poppins(
@@ -149,7 +156,6 @@ TextStyle chipText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(12),
   letterSpacing: 2,
   fontWeight: FontWeight.w500, //medium
-  // color: kPrimaryTextColor,
 );
 
 //padding

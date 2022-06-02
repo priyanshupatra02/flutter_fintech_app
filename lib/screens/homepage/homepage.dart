@@ -13,7 +13,78 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-      appBar: _buildAppBar(),
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: kAppBarColor,
+        toolbarHeight: getDeviceHeight(130),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            // For border around profile pic
+            CircleAvatar(
+              radius: getDeviceWidth(27),
+              backgroundColor: kSecondaryColor,
+              child: CircleAvatar(
+                radius: getDeviceWidth(25),
+                backgroundImage: const NetworkImage(
+                  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
+                ),
+              ),
+            ),
+            SizedBox(
+              width: getDeviceWidth(25),
+            ),
+
+            // username & upi id of the user
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "jean",
+                  style: kAppbarTitleText,
+                ),
+                Row(
+                  children: [
+                    SvgPicture.asset(
+                      "assets/logos/axis-bank-logo.svg",
+                      height: getDeviceHeight(10),
+                      width: getDeviceWidth(10),
+                    ),
+                    SizedBox(width: getDeviceWidth(5)),
+                    Text(
+                      "jeanpaul@okaxis",
+                      style: GoogleFonts.poppins(
+                        fontSize: 10,
+                        letterSpacing: 1,
+                        fontWeight: FontWeight.w300,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            // qr scanner & notification icon
+            const Spacer(),
+            IconButton(
+              onPressed: () {},
+              icon: SvgPicture.asset(
+                "assets/icons/qr-code-scan.svg",
+                height: getDeviceHeight(20),
+                width: getDeviceWidth(20),
+              ),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: SvgPicture.asset(
+                "assets/icons/notification.svg",
+                height: getDeviceHeight(25),
+                width: getDeviceWidth(25),
+              ),
+            ),
+          ],
+        ),
+      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: kSinglePad,
@@ -81,6 +152,7 @@ class _HomePageState extends State<HomePage> {
               SizedBox(height: getDeviceHeight(45)),
 
               // recent transaction starts here ->
+              //TODO: Make it dynamic
               Column(
                 children: [
                   Row(
@@ -103,11 +175,17 @@ class _HomePageState extends State<HomePage> {
                   ),
                   SizedBox(height: getDeviceHeight(15)),
                   ListView.separated(
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     itemCount: 7,
                     itemBuilder: (context, index) {
-                      return CustomListTile();
+                      return CustomListTile(
+                        icon: SvgPicture.asset("assets/social/figma-logo.svg"),
+                        titleText: "Figma",
+                        subtitleText: "February 1, 2022",
+                        deductedMoney: "-₹330",
+                        category: "subscription",
+                      );
                     },
                     separatorBuilder: (context, index) {
                       return SizedBox(
@@ -125,85 +203,7 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-// custom widgets
-
-// Custom AppBar Widget
-AppBar _buildAppBar() {
-  return AppBar(
-    centerTitle: true,
-    backgroundColor: kAppBarColor,
-    toolbarHeight: getDeviceHeight(130),
-    title: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        // For border around profile pic
-        CircleAvatar(
-          radius: getDeviceWidth(27),
-          backgroundColor: kSecondaryColor,
-          child: CircleAvatar(
-            radius: getDeviceWidth(25),
-            backgroundImage: const NetworkImage(
-              "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
-            ),
-          ),
-        ),
-        SizedBox(
-          width: getDeviceWidth(25),
-        ),
-
-        // username & upi id of the user
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "jean",
-              style: kAppbarTitleText,
-            ),
-            Row(
-              children: [
-                SvgPicture.asset(
-                  "assets/logos/axis-bank-logo.svg",
-                  height: getDeviceHeight(10),
-                  width: getDeviceWidth(10),
-                ),
-                SizedBox(width: getDeviceWidth(5)),
-                Text(
-                  "jeanpaul@okaxis",
-                  style: GoogleFonts.poppins(
-                    fontSize: 10,
-                    letterSpacing: 1,
-                    fontWeight: FontWeight.w300,
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-        // qr scanner & notification icon
-        const Spacer(),
-        IconButton(
-          onPressed: () {},
-          icon: SvgPicture.asset(
-            "assets/icons/qr-code-scan.svg",
-            height: getDeviceHeight(20),
-            width: getDeviceWidth(20),
-          ),
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: SvgPicture.asset(
-            "assets/icons/notification.svg",
-            height: getDeviceHeight(25),
-            width: getDeviceWidth(25),
-          ),
-        ),
-      ],
-    ),
-  );
-}
-
-// favorite column
+// // favorite column
 Widget _buildFavoriteMenu() {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,

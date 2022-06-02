@@ -67,7 +67,7 @@ flutter:
     - assets/icons/
     - assets/icons/selected/
     - assets/icons/unselected/
-    - assets/icons/social/
+    - assets/social/
     - assets/users/
     - assets/images/
     - assets/logos/
