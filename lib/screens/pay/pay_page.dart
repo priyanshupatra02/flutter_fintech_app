@@ -15,6 +15,7 @@ class _PayPageState extends State<PayPage> {
         centerTitle: true,
         backgroundColor: kAppBarColor,
         toolbarHeight: getDeviceHeight(130),
+        
       ),
       body: Center(
        child:  Text("pay"),
