@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Fintech App',
       theme: ThemeData(
-        // TODO: more about typographyy class in flutter
+        // TODO: more about typography class in flutter
         primaryTextTheme: Typography(platform: TargetPlatform.iOS).white,
         textTheme: Typography(platform: TargetPlatform.iOS).white,
         splashColor: Colors.transparent,
@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-      body: Home(),
+      body: PayPage(),
     );
   }
 }

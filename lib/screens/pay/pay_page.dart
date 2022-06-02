@@ -11,6 +11,11 @@ class _PayPageState extends State<PayPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: kAppBarColor,
+        toolbarHeight: getDeviceHeight(130),
+      ),
       body: Center(
        child:  Text("pay"),
       ),
