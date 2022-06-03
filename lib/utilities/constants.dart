@@ -137,10 +137,10 @@ TextStyle secondaryListSubtitleText = GoogleFonts.poppins(
 );
 
 TextStyle iconLabelText = GoogleFonts.poppins(
-  fontSize: getDeviceWidth(9),
+  fontSize: getDeviceWidth(7.5),
   letterSpacing: 0.75,
   fontWeight: FontWeight.w600, //semi-bold
-  // color: kPrimaryTextColor,
+
 );
 
 TextStyle buttonTitleText = GoogleFonts.poppins(
@@ -233,10 +233,10 @@ BorderRadiusGeometry kHalfCurveVerticalBottom =
 
 // Icons border width
 Border whiteBorder = const Border(
-  top: BorderSide(width: 1.5, color: kSecondaryColor),
-  left: BorderSide(width: 1.5, color: kSecondaryColor),
-  right: BorderSide(width: 1.5, color: kSecondaryColor),
-  bottom: BorderSide(width: 1.5, color: kSecondaryColor),
+  top: BorderSide(width: 1, color: kSecondaryColor),
+  left: BorderSide(width: 1, color: kSecondaryColor),
+  right: BorderSide(width: 1, color: kSecondaryColor),
+  bottom: BorderSide(width: 1, color: kSecondaryColor),
 );
 
 // Form Error

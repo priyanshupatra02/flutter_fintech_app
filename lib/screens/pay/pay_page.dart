@@ -83,63 +83,37 @@ class _PayPageState extends State<PayPage> {
               SizedBox(height: getDeviceHeight(25)),
 
               // code for rent & education starts here ->
-              Container(
-                padding: kSinglePad,
-                height: getDeviceHeight(220),
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  gradient: kPrimaryDarkGradientColor,
+              PayHistoryCategory(
+                categoryName: "rent & education.",
+                icon: SvgPicture.asset(
+                  "assets/icons/maintenence.svg",
+                  height: getDeviceHeight(45),
+                  width: getDeviceWidth(60),
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "rent & education.",
-                      style: kHeadingText,
-                    ),
-                    SizedBox(height: getDeviceHeight(20)),
+                iconLabel: "maintanence",
+              ),
+              SizedBox(height: getDeviceHeight(25)),
 
-                    //List of icons
-                    SizedBox(
-                      height: 120,
-                      child: ListView.separated(
-                        itemCount: 10,
-                        shrinkWrap: true,
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) {
-                          return Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Container(
-                                alignment: Alignment.topCenter,
-                                height: getDeviceHeight(90),
-                                width: getDeviceWidth(90),
-                                decoration: BoxDecoration(
-                                  border: whiteBorder,
-                                ),
-                                child: SvgPicture.asset(
-                                  "assets/icons/maintenence.svg",
-                                  height: getDeviceHeight(70),
-                                  width: getDeviceWidth(80),
-                                ),
-                              ),
-                              SizedBox(
-                                height: getDeviceHeight(5),
-                              ),
-                              Text(
-                                "maintanence",
-                                style: iconLabelText,
-                              ),
-                            ],
-                          );
-                        },
-                        separatorBuilder: (context, index) {
-                          return SizedBox(width: getDeviceWidth(25));
-                        },
-                      ),
-                    ),
-                  ],
+              // code for rent & education starts here ->
+              PayHistoryCategory(
+                categoryName: "telecom & recharges.",
+                icon: SvgPicture.asset(
+                  "assets/icons/mobile-recharge.svg",
+                  height: getDeviceHeight(45),
+                  width: getDeviceWidth(60),
                 ),
+                iconLabel: "mobiles recharge",
+              ),
+
+              // code for rent & education starts here ->
+              PayHistoryCategory(
+                categoryName: "household & more.",
+                icon: SvgPicture.asset(
+                  "assets/icons/electricity.svg",
+                  height: getDeviceHeight(45),
+                  width: getDeviceWidth(60),
+                ),
+                iconLabel: "electricity",
               ),
             ],
           ),
