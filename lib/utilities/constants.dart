@@ -4,6 +4,7 @@ import 'package:flutter_fintech_app/utilities/import.dart';
 const Color kPrimaryBgColor = Color(0xFF212121);
 const Color kAppBarColor = Color(0xFF2E2E2E); // For appBar & stuffs.
 const Color kSecondaryColor = Color(0xFFFFFFFF);
+
 const Color kSecondaryLightColor = Color(0xFF585757); // For bottom modal sheet.
 const Color kIconColor = Color(0xFF959595);
 const Color kIconBgColor = Color(0xFF222121);
@@ -21,16 +22,15 @@ const Color kSuccessColor = Color(0xFF00BA39);
 const Color kErrorColor = Color(0xFFFF4B4B);
 
 // Gradients
-// TODO: add stops
 
 LinearGradient kPrimaryDarkGradientColor = LinearGradient(
   begin: Alignment.topLeft,
   end: Alignment.bottomRight,
   colors: [
-    Color(0xFF484848),
-    Color(0xFF000000).withOpacity(0.4),
+    const Color(0xFF484848),
+    const Color(0xFF000000).withOpacity(0.4),
   ],
-  stops: [0.002, 0.6],
+  stops: const [0.002, 0.6],
 ); // for debit cards & list tiles
 
 const LinearGradient kSecondaryGradientColor = LinearGradient(
@@ -60,7 +60,7 @@ const Color kInfoTextColor = Color(0xFF83838F); // For onboarding screen texts.
 // Text styles
 TextStyle kHeadingText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(17),
-letterSpacing: 0.5,
+  letterSpacing: 0.5,
   fontWeight: FontWeight.bold,
 ); // used for your bills, rent & education etc.
 
@@ -137,8 +137,8 @@ TextStyle secondaryListSubtitleText = GoogleFonts.poppins(
 );
 
 TextStyle iconLabelText = GoogleFonts.poppins(
-  fontSize: getDeviceWidth(6),
-  letterSpacing: 2,
+  fontSize: getDeviceWidth(9),
+  letterSpacing: 0.75,
   fontWeight: FontWeight.w600, //semi-bold
   // color: kPrimaryTextColor,
 );
@@ -210,7 +210,7 @@ EdgeInsetsGeometry kDoubleVertical =
 EdgeInsetsGeometry kDoubleMiddleVertical =
     EdgeInsets.symmetric(vertical: getDeviceWidth(45));
 
-// Radius Constant For container
+// All Circular Radius Constant
 BorderRadiusGeometry kQuatCurve = BorderRadius.circular(getDeviceWidth(5));
 BorderRadiusGeometry kHalfCurve = BorderRadius.circular(getDeviceWidth(10));
 BorderRadiusGeometry kHalfMiddleCurve =
@@ -218,6 +218,26 @@ BorderRadiusGeometry kHalfMiddleCurve =
 BorderRadiusGeometry kFullCurve = BorderRadius.circular(getDeviceWidth(20));
 BorderRadiusGeometry kFullMiddleCurve =
     BorderRadius.circular(getDeviceWidth(25));
+
+// Horizontal Circular Radius Constant
+BorderRadiusGeometry kHalfCurveHorizontalLeft =
+    BorderRadius.horizontal(left: Radius.circular(getDeviceWidth(10)));
+BorderRadiusGeometry kHalfCurveHorizontalRight =
+    BorderRadius.horizontal(right: Radius.circular(getDeviceWidth(10)));
+
+// Vertical Circular Radius Constant
+BorderRadiusGeometry kHalfCurveVerticalTop =
+    BorderRadius.vertical(top: Radius.circular(getDeviceWidth(10)));
+BorderRadiusGeometry kHalfCurveVerticalBottom =
+    BorderRadius.vertical(bottom: Radius.circular(getDeviceWidth(10)));
+
+// Icons border width
+Border whiteBorder = const Border(
+  top: BorderSide(width: 1.5, color: kSecondaryColor),
+  left: BorderSide(width: 1.5, color: kSecondaryColor),
+  right: BorderSide(width: 1.5, color: kSecondaryColor),
+  bottom: BorderSide(width: 1.5, color: kSecondaryColor),
+);
 
 // Form Error
 // final RegExp emailValidatorRegExp =

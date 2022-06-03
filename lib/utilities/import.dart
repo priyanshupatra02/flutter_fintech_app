@@ -33,4 +33,6 @@ export 'package:flutter_fintech_app/widgets/home.dart'; // on connecting to fire
 export 'package:flutter_fintech_app/widgets/custom_list_tile.dart';
 export 'package:flutter_fintech_app/widgets/custom_app_bar.dart';
 export 'package:flutter_fintech_app/widgets/side_action_button.dart';
+export 'package:flutter_fintech_app/widgets/PaymentHistoryWidgets/your_bills_card.dart';
+
 

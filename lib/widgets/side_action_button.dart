@@ -14,7 +14,9 @@ class SideActionButton extends StatelessWidget {
     required this.height,
     required this.width,
     required this.leadingIcon,
-    required this.trailingIcon, required this.titleText, required this.subtitleText,
+    required this.trailingIcon,
+    required this.titleText,
+    required this.subtitleText,
   }) : super(key: key);
 
   @override
@@ -26,8 +28,8 @@ class SideActionButton extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: kPrimaryDarkGradientColor,
         borderRadius: isLeftCircularBorder
-            ? BorderRadius.horizontal(left: Radius.circular(getDeviceWidth(10)))
-            : BorderRadius.horizontal(right: Radius.circular(getDeviceHeight(10))),
+            ? kHalfCurveHorizontalLeft
+            : kHalfCurveHorizontalRight,
       ),
       child: Row(
         children: [
