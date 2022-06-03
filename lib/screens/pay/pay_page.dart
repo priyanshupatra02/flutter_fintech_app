@@ -41,7 +41,7 @@ class _PayPageState extends State<PayPage> {
                   subtitleText: "${rupee}30",
                 ),
               ),
-              SizedBox(height: getDeviceHeight(20)),
+              SizedBox(height: getDeviceHeight(25)),
 
               //your bills code starts here ->
               Container(
@@ -104,7 +104,7 @@ class _PayPageState extends State<PayPage> {
                 ),
                 iconLabel: "mobiles recharge",
               ),
-
+              SizedBox(height: getDeviceHeight(25)),
               // code for rent & education starts here ->
               PayHistoryCategory(
                 categoryName: "household & more.",
@@ -114,6 +114,71 @@ class _PayPageState extends State<PayPage> {
                   width: getDeviceWidth(60),
                 ),
                 iconLabel: "electricity",
+              ),
+              SizedBox(height: getDeviceHeight(25)),
+
+              // code for bottom side action buttons starts here ->
+              Align(
+                alignment: Alignment.centerRight,
+                child: SideActionButton(
+                  isLeftCircularBorder: true,
+                  height: getDeviceHeight(70),
+                  width: getDeviceWidth(260),
+                  leadingIcon: SvgPicture.asset(
+                    "assets/icons/autopay.svg",
+                    height: getDeviceHeight(15),
+                    width: getDeviceWidth(15),
+                  ),
+                  trailingIcon: SvgPicture.asset(
+                    "assets/icons/go-to-icon.svg",
+                    height: getDeviceHeight(10),
+                    width: getDeviceWidth(10),
+                  ),
+                  titleText: "autopay settings.",
+                  subtitleText: "always pay your bills on time",
+                ),
+              ),
+              SizedBox(height: getDeviceHeight(25)),
+              Align(
+                alignment: Alignment.centerRight,
+                child: SideActionButton(
+                  isLeftCircularBorder: true,
+                  height: getDeviceHeight(70),
+                  width: getDeviceWidth(240),
+                  leadingIcon: SvgPicture.asset(
+                    "assets/icons/payment-history.svg",
+                    height: getDeviceHeight(15),
+                    width: getDeviceWidth(15),
+                  ),
+                  trailingIcon: SvgPicture.asset(
+                    "assets/icons/go-to-icon.svg",
+                    height: getDeviceHeight(10),
+                    width: getDeviceWidth(10),
+                  ),
+                  titleText: "payment history.",
+                  subtitleText: "track all your payments",
+                ),
+              ),
+              SizedBox(height: getDeviceHeight(25)),
+              Align(
+                alignment: Alignment.centerRight,
+                child: SideActionButton(
+                  isLeftCircularBorder: true,
+                  height: getDeviceHeight(70),
+                  width: getDeviceWidth(220),
+                  leadingIcon: SvgPicture.asset(
+                    "assets/icons/support.svg",
+                    height: getDeviceHeight(15),
+                    width: getDeviceWidth(15),
+                  ),
+                  trailingIcon: SvgPicture.asset(
+                    "assets/icons/go-to-icon.svg",
+                    height: getDeviceHeight(10),
+                    width: getDeviceWidth(10),
+                  ),
+                  titleText: "support.",
+                  subtitleText: "resolve all your concerns",
+                ),
               ),
             ],
           ),

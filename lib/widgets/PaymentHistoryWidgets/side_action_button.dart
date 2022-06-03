@@ -1,6 +1,7 @@
 import 'package:flutter_fintech_app/utilities/import.dart';
 
 class SideActionButton extends StatelessWidget {
+
   final bool isLeftCircularBorder;
   final double height;
   final double width;
@@ -21,6 +22,7 @@ class SideActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+      //TODO: Add gesture detector here
     return Container(
       padding: kQuatHalfPad,
       height: height,
