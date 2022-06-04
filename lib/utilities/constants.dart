@@ -106,7 +106,7 @@ TextStyle buttonText = GoogleFonts.poppins(
 
 TextStyle kAppbarTitleText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(17),
-  height: 1.3,
+  height: 1.5,
   letterSpacing: 1,
   fontWeight: FontWeight.bold,
 );
@@ -165,6 +165,12 @@ TextStyle buttonSubtitleText = GoogleFonts.poppins(
   fontWeight: FontWeight.w300, //light
   color: kSecondaryLightTextColor,
 );
+
+TextStyle payCardsLabelText = GoogleFonts.poppins(
+  fontSize: getDeviceWidth(10),
+  letterSpacing: 0.5,
+  fontWeight: FontWeight.w500, //medium
+); // for send/receive/add money labels
 
 //padding
 // EdgeInsets.all Padding Constants on this Project

@@ -17,7 +17,6 @@ class YourBillsStatus extends StatelessWidget {
     return Container(
       alignment: Alignment.center,
       height: getDeviceHeight(250),
-      width: getDeviceWidth(160),
       decoration: BoxDecoration(
         borderRadius: kHalfCurve,
         color: kTileColor,
@@ -29,31 +28,29 @@ class YourBillsStatus extends StatelessWidget {
           icon,
           SizedBox(height: getDeviceWidth(25)),
           Container(
-            alignment: Alignment.center,
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
             decoration: BoxDecoration(
               borderRadius: kHalfCurve,
               color: kIconBgColor,
             ),
-            height: getDeviceHeight(50),
-            width: getDeviceWidth(
-              120,
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Jio prepaid",
-                  style: secondaryListTitleText,
-                ),
-                //TODO; replace with real number in production.
-                Text(
-                  "637****",
-                  style: secondaryListSubtitleText,
-                ),
-              ],
+            child: FittedBox(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Jio prepaid",
+                    style: secondaryListTitleText,
+                  ),
+                  //TODO; replace with real number in production.
+                  Text(
+                    "637****",
+                    style: secondaryListSubtitleText,
+                  ),
+                ],
+              ),
             ),
           ),
-          const SizedBox(height: 15),
+          SizedBox(height: getDeviceHeight(15)),
           Container(
             alignment: Alignment.center,
             height: getDeviceHeight(30),
@@ -68,10 +65,9 @@ class YourBillsStatus extends StatelessWidget {
           ),
           const Spacer(),
           Container(
-            alignment: Alignment.center,
-            padding: kQuatPad,
-            height: getDeviceHeight(50),
-            width: getDeviceWidth(160),
+            // alignment: Alignment.center,
+            padding: EdgeInsets.symmetric(
+                horizontal: getDeviceWidth(40), vertical: getDeviceHeight(10)),
             decoration: BoxDecoration(
               borderRadius: kHalfCurveVerticalBottom,
               color: isBillPaid
@@ -85,20 +81,23 @@ class YourBillsStatus extends StatelessWidget {
                   )
                 : Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Column(
-                        children: [
-                          Text(
-                            "recharge.",
-                            style: secondaryListTitleText,
-                          ),
-                          Text(
-                            "WIN UP TO ₹5k",
-                            style: secondaryListSubtitleText,
-                          ),
-                        ],
+                      FittedBox(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "recharge.",
+                              style: secondaryListTitleText,
+                            ),
+                            Text(
+                              "WIN UP TO ₹5k",
+                              style: secondaryListSubtitleText,
+                            ),
+                          ],
+                        ),
                       ),
+                      SizedBox(width: getDeviceWidth(10)),
                       SvgPicture.asset("assets/icons/go-to-icon.svg")
                       // SizedBox(width: getDeviceWidth(10)),
                     ],

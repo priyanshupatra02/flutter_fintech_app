@@ -15,15 +15,14 @@ class _PayPageState extends State<PayPage> {
         title: "pay all your bills\nat one place.",
       ),
       body: SingleChildScrollView(
-        child: Container(
-          // it is the bg container
-          //TODO: remove this container later
+        child: Padding(
           padding: kHalfMiddleVertical,
           child: Column(
             children: [
               Align(
                 alignment: Alignment.topRight,
                 child: SideActionButton(
+                  onTap: () {},
                   isLeftCircularBorder: true,
                   leadingIcon: SvgPicture.asset(
                     "assets/icons/cashback.svg",
@@ -44,7 +43,7 @@ class _PayPageState extends State<PayPage> {
               //your bills code starts here ->
               Container(
                 padding: kSinglePad,
-                height: getDeviceHeight(360),
+                height: getDeviceHeight(380),
                 width: double.infinity,
                 decoration: BoxDecoration(
                   gradient: kPrimaryDarkGradientColor,
@@ -119,6 +118,7 @@ class _PayPageState extends State<PayPage> {
               Align(
                 alignment: Alignment.centerRight,
                 child: SideActionButton(
+                  onTap: () {},
                   isLeftCircularBorder: true,
                   leadingIcon: SvgPicture.asset(
                     "assets/icons/autopay.svg",
@@ -138,6 +138,7 @@ class _PayPageState extends State<PayPage> {
               Align(
                 alignment: Alignment.centerRight,
                 child: SideActionButton(
+                  onTap: () {},
                   isLeftCircularBorder: true,
                   leadingIcon: SvgPicture.asset(
                     "assets/icons/support.svg",
@@ -157,6 +158,15 @@ class _PayPageState extends State<PayPage> {
               Align(
                 alignment: Alignment.centerRight,
                 child: SideActionButton(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute<void>(
+                        builder: (BuildContext context) =>
+                            const PaymentHistory(),
+                      ),
+                    );
+                  },
                   isLeftCircularBorder: true,
                   leadingIcon: SvgPicture.asset(
                     "assets/icons/payment-history.svg",

@@ -139,15 +139,24 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   _buildPayCards(
                     "send\nmoney",
-                    SvgPicture.asset("assets/icons/send-money.svg"),
+                    SvgPicture.asset(
+                      "assets/icons/send-money.svg",
+                      color: kSecondaryColor.withOpacity(0.5),
+                    ),
                   ),
                   _buildPayCards(
                     "receive\nmoney",
-                    SvgPicture.asset("assets/icons/receive-money.svg"),
+                    SvgPicture.asset(
+                      "assets/icons/receive-money.svg",
+                      color: kSecondaryColor.withOpacity(0.5),
+                    ),
                   ),
                   _buildPayCards(
                     "add\nmoney",
-                    SvgPicture.asset("assets/icons/add-money-to-wallet.svg"),
+                    SvgPicture.asset(
+                      "assets/icons/add-money-to-wallet.svg",
+                      color: kSecondaryColor.withOpacity(0.5),
+                    ),
                   ),
                 ],
               ),
@@ -280,8 +289,11 @@ Widget _buildPayCards(String text, Widget icon) {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         icon,
-        const SizedBox(height: 10),
-        Text(text),
+        SizedBox(height: getDeviceHeight(10)),
+        Text(
+          text,
+          style: payCardsLabelText,
+        ),
       ],
     ),
   );

@@ -1,6 +1,7 @@
 import 'package:flutter_fintech_app/utilities/import.dart';
 
 class SideActionButton extends StatelessWidget {
+  final Function() onTap;
   final bool isLeftCircularBorder;
   final Widget leadingIcon;
   final Widget trailingIcon;
@@ -13,6 +14,7 @@ class SideActionButton extends StatelessWidget {
     required this.trailingIcon,
     required this.titleText,
     required this.subtitleText,
+    required this.onTap,
   }) : super(key: key);
 
   @override
@@ -46,7 +48,10 @@ class SideActionButton extends StatelessWidget {
               ],
             ),
             SizedBox(width: getDeviceWidth(25)),
-            trailingIcon,
+            GestureDetector(
+              onTap: onTap,
+              child: trailingIcon,
+            ),
           ],
         ),
       ),

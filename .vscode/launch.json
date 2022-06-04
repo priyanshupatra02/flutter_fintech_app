@@ -4,7 +4,6 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
         {
             "name": "flutter_fintech_app",
             "request": "launch",
@@ -34,11 +33,17 @@
             "type": "dart",
             "deviceId": "8A2EA3BA-632F-4A94-819F-CA09F2E659E4"
         },
+        // {
+        //     "name": "Chrome",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "deviceId": "chrome"
+        // },
         {
-            "name": "Chrome",
+            "name": "Realme 2",
             "request": "launch",
             "type": "dart",
-            "deviceId": "chrome"
+            "deviceId": "5e9b0a5d"
         },
     ],
     "compounds": [
@@ -47,7 +52,8 @@
             "configurations": [
                 "Redmi Note 5 Pro",
                 "iPhone 11",
-                "Chrome"
+                // "Chrome",
+                "Realme 2"
             ],
         }
     ]
