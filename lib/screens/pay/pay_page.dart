@@ -24,8 +24,6 @@ class _PayPageState extends State<PayPage> {
               Align(
                 alignment: Alignment.topRight,
                 child: SideActionButton(
-                  height: getDeviceHeight(65),
-                  width: getDeviceWidth(180),
                   isLeftCircularBorder: true,
                   leadingIcon: SvgPicture.asset(
                     "assets/icons/cashback.svg",
@@ -46,7 +44,7 @@ class _PayPageState extends State<PayPage> {
               //your bills code starts here ->
               Container(
                 padding: kSinglePad,
-                height: getDeviceHeight(350),
+                height: getDeviceHeight(360),
                 width: double.infinity,
                 decoration: BoxDecoration(
                   gradient: kPrimaryDarkGradientColor,
@@ -122,8 +120,6 @@ class _PayPageState extends State<PayPage> {
                 alignment: Alignment.centerRight,
                 child: SideActionButton(
                   isLeftCircularBorder: true,
-                  height: getDeviceHeight(70),
-                  width: getDeviceWidth(260),
                   leadingIcon: SvgPicture.asset(
                     "assets/icons/autopay.svg",
                     height: getDeviceHeight(15),
@@ -143,29 +139,6 @@ class _PayPageState extends State<PayPage> {
                 alignment: Alignment.centerRight,
                 child: SideActionButton(
                   isLeftCircularBorder: true,
-                  height: getDeviceHeight(70),
-                  width: getDeviceWidth(240),
-                  leadingIcon: SvgPicture.asset(
-                    "assets/icons/payment-history.svg",
-                    height: getDeviceHeight(15),
-                    width: getDeviceWidth(15),
-                  ),
-                  trailingIcon: SvgPicture.asset(
-                    "assets/icons/go-to-icon.svg",
-                    height: getDeviceHeight(10),
-                    width: getDeviceWidth(10),
-                  ),
-                  titleText: "payment history.",
-                  subtitleText: "track all your payments",
-                ),
-              ),
-              SizedBox(height: getDeviceHeight(25)),
-              Align(
-                alignment: Alignment.centerRight,
-                child: SideActionButton(
-                  isLeftCircularBorder: true,
-                  height: getDeviceHeight(70),
-                  width: getDeviceWidth(220),
                   leadingIcon: SvgPicture.asset(
                     "assets/icons/support.svg",
                     height: getDeviceHeight(15),
@@ -178,6 +151,25 @@ class _PayPageState extends State<PayPage> {
                   ),
                   titleText: "support.",
                   subtitleText: "resolve all your concerns",
+                ),
+              ),
+              SizedBox(height: getDeviceHeight(25)),
+              Align(
+                alignment: Alignment.centerRight,
+                child: SideActionButton(
+                  isLeftCircularBorder: true,
+                  leadingIcon: SvgPicture.asset(
+                    "assets/icons/payment-history.svg",
+                    height: getDeviceHeight(15),
+                    width: getDeviceWidth(15),
+                  ),
+                  trailingIcon: SvgPicture.asset(
+                    "assets/icons/go-to-icon.svg",
+                    height: getDeviceHeight(10),
+                    width: getDeviceWidth(10),
+                  ),
+                  titleText: "payment history.",
+                  subtitleText: "track all your payments",
                 ),
               ),
             ],

@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // For border around profile pic
-             CircleAvatar(
+            CircleAvatar(
               radius: getDeviceWidth(27),
               backgroundColor: kSecondaryColor,
               child: CircleAvatar(
@@ -32,9 +32,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            SizedBox(
-              width: getDeviceWidth(25),
-            ),
+            SizedBox(width: getDeviceWidth(25)),
 
             // username & upi id of the user
             Column(
@@ -156,7 +154,6 @@ class _HomePageState extends State<HomePage> {
               SizedBox(height: getDeviceHeight(45)),
 
               // recent transaction starts here ->
-              //TODO: Make it dynamic
               Column(
                 children: [
                   Row(
@@ -167,7 +164,15 @@ class _HomePageState extends State<HomePage> {
                         style: categoryHeadingStyle,
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          // TODO: Add routing Navigator push
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute<void>(
+                          //     builder: (BuildContext context) =>  (),
+                          //   ),
+                          // );
+                        },
                         child: Text(
                           "see all",
                           style: GoogleFonts.poppins(
@@ -185,7 +190,7 @@ class _HomePageState extends State<HomePage> {
                     itemBuilder: (context, index) {
                       return CustomListTile(
                         height: getDeviceHeight(80),
-                        width: getDeviceWidth(370),
+                        width: double.infinity,
                         icon: SvgPicture.asset("assets/social/figma-logo.svg"),
                         titleText: "Figma",
                         subtitleText: "February 1, 2022",
@@ -220,7 +225,7 @@ Widget _buildFavoriteMenu() {
       ),
       SizedBox(height: getDeviceHeight(20)),
       SizedBox(
-        height: getDeviceHeight(80),
+        height: getDeviceHeight(90),
         child: ListView.separated(
           scrollDirection: Axis.horizontal,
           itemCount: 20,

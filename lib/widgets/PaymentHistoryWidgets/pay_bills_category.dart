@@ -16,7 +16,7 @@ class PayHistoryCategory extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: kSinglePad,
-      height: getDeviceHeight(200),
+      height: getDeviceHeight(210),
       width: double.infinity,
       decoration: BoxDecoration(
         gradient: kPrimaryDarkGradientColor,

@@ -19,6 +19,7 @@ export 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
 export 'package:flutter_fintech_app/main.dart';
 export 'package:flutter_fintech_app/screens/onboarding_screen/onboarding.dart';
 export 'package:flutter_fintech_app/screens/homepage/homepage.dart';
+export 'package:flutter_fintech_app/screens/pay/payment_history.dart';
 
 // nav bar destinations
 export 'package:flutter_fintech_app/screens/cards/cards.dart';

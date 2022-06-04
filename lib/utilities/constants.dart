@@ -140,7 +140,6 @@ TextStyle iconLabelText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(7.5),
   letterSpacing: 0.75,
   fontWeight: FontWeight.w600, //semi-bold
-
 );
 
 TextStyle buttonTitleText = GoogleFonts.poppins(

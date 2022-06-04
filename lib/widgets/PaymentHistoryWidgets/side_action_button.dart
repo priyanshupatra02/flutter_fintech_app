@@ -1,10 +1,7 @@
 import 'package:flutter_fintech_app/utilities/import.dart';
 
 class SideActionButton extends StatelessWidget {
-
   final bool isLeftCircularBorder;
-  final double height;
-  final double width;
   final Widget leadingIcon;
   final Widget trailingIcon;
   final String titleText;
@@ -12,8 +9,6 @@ class SideActionButton extends StatelessWidget {
   const SideActionButton({
     Key? key,
     required this.isLeftCircularBorder,
-    required this.height,
-    required this.width,
     required this.leadingIcon,
     required this.trailingIcon,
     required this.titleText,
@@ -22,38 +17,38 @@ class SideActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-      //TODO: Add gesture detector here
+    //TODO: Add gesture detector here
     return Container(
       padding: kQuatHalfPad,
-      height: height,
-      width: width,
       decoration: BoxDecoration(
         gradient: kPrimaryDarkGradientColor,
         borderRadius: isLeftCircularBorder
             ? kHalfCurveHorizontalLeft
             : kHalfCurveHorizontalRight,
       ),
-      child: Row(
-        children: [
-          leadingIcon,
-          SizedBox(
-            width: getDeviceWidth(20),
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              SizedBox(
-                child: Text(titleText, style: secondaryListTitleText),
-              ),
-              SizedBox(
-                child: Text(subtitleText, style: secondaryListSubtitleText),
-              ),
-            ],
-          ),
-          const Spacer(),
-          trailingIcon,
-        ],
+      child: FittedBox(
+        child: Row(
+          children: [
+            leadingIcon,
+            SizedBox(width: getDeviceWidth(20)),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  titleText,
+                  style: secondaryListTitleText,
+                ),
+                SizedBox(height: getDeviceHeight(3)),
+                Text(
+                  subtitleText,
+                  style: secondaryListSubtitleText,
+                ),
+              ],
+            ),
+            SizedBox(width: getDeviceWidth(25)),
+            trailingIcon,
+          ],
+        ),
       ),
     );
   }
