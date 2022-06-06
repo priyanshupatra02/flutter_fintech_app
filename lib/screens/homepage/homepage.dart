@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> {
                     Text(
                       "jeanpaul@okaxis",
                       style: GoogleFonts.poppins(
-                        fontSize: 10,
+                        fontSize: getDeviceWidth(10),
                         letterSpacing: 1,
                         fontWeight: FontWeight.w300,
                       ),
@@ -69,7 +69,14 @@ class _HomePageState extends State<HomePage> {
             // qr scanner & notification icon
             const Spacer(),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) => const ScanQrPage(),
+                  ),
+                );
+              },
               icon: SvgPicture.asset(
                 "assets/icons/qr-code-scan.svg",
                 height: getDeviceHeight(20),
@@ -77,7 +84,14 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) => const NotificationPage(),
+                  ),
+                );
+              },
               icon: SvgPicture.asset(
                 "assets/icons/notification.svg",
                 height: getDeviceHeight(25),
@@ -138,25 +152,34 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   _buildPayCards(
-                    "send\nmoney",
-                    SvgPicture.asset(
+                    text: "send\nmoney",
+                    icon:SvgPicture.asset(
                       "assets/icons/send-money.svg",
                       color: kSecondaryColor.withOpacity(0.5),
                     ),
+                   onTap:  () {},
                   ),
                   _buildPayCards(
-                    "receive\nmoney",
-                    SvgPicture.asset(
-                      "assets/icons/receive-money.svg",
-                      color: kSecondaryColor.withOpacity(0.5),
-                    ),
-                  ),
+                     text:  "request\nmoney",
+                     icon: SvgPicture.asset(
+                        "assets/icons/receive-money.svg",
+                        color: kSecondaryColor.withOpacity(0.5),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => const RequestMoneyPage(),
+                        ),
+                      );
+                      },),
                   _buildPayCards(
-                    "add\nmoney",
-                    SvgPicture.asset(
+                    text: "add\nmoney",
+                    icon: SvgPicture.asset(
                       "assets/icons/add-money-to-wallet.svg",
                       color: kSecondaryColor.withOpacity(0.5),
                     ),
+                    onTap: () {},
                   ),
                 ],
               ),
@@ -203,6 +226,7 @@ class _HomePageState extends State<HomePage> {
                         icon: SvgPicture.asset("assets/social/figma-logo.svg"),
                         titleText: "Figma",
                         subtitleText: "February 1, 2022",
+                        isReceivedMoney: false,
                         deductedMoney: "-₹330",
                         category: "subscription",
                       );
@@ -267,34 +291,37 @@ Widget _buildFavoriteMenu() {
 }
 
 // send/receive money cards
-Widget _buildPayCards(String text, Widget icon) {
-  return Container(
-    padding: kQuatHalfPad,
-    width: getDeviceWidth(100),
-    height: getDeviceHeight(110),
-    decoration: BoxDecoration(
-      color: kPrimaryBgColor,
-      borderRadius: BorderRadius.circular(10),
-      boxShadow: const [
-        BoxShadow(
-          color: kShadowPrimaryDeep,
-          blurRadius: 10,
-          offset: Offset(1, 3),
-          inset: true,
-        ),
-      ],
-    ),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        icon,
-        SizedBox(height: getDeviceHeight(10)),
-        Text(
-          text,
-          style: payCardsLabelText,
-        ),
-      ],
+Widget _buildPayCards({required String text, required Widget icon, void Function()? onTap}) {
+  return GestureDetector(
+    onTap: onTap,
+    child: Container(
+      padding: kQuatHalfPad,
+      width: getDeviceWidth(100),
+      height: getDeviceHeight(110),
+      decoration: BoxDecoration(
+        color: kPrimaryBgColor,
+        borderRadius: kHalfCurve,
+        boxShadow: const [
+          BoxShadow(
+            color: kShadowPrimaryDeep,
+            blurRadius: 10,
+            offset: Offset(1, 3),
+            inset: true,
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          icon,
+          SizedBox(height: getDeviceHeight(10)),
+          Text(
+            text,
+            style: payCardsLabelText,
+          ),
+        ],
+      ),
     ),
   );
 }

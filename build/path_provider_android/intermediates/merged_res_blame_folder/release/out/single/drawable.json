@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/flutter_fintech_app/build/path_provider_android/intermediates/merged_res/release/drawable/notification_bg.xml",
+        "source": "/Users/priyanshupatra/.gradle/caches/transforms-3/acbce933e4b464a5224ed377a62db1f5/transformed/core-1.6.0/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/flutter_fintech_app/build/path_provider_android/intermediates/merged_res/release/drawable/notification_icon_background.xml",
+        "source": "/Users/priyanshupatra/.gradle/caches/transforms-3/acbce933e4b464a5224ed377a62db1f5/transformed/core-1.6.0/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/flutter_fintech_app/build/path_provider_android/intermediates/merged_res/release/drawable/notification_tile_bg.xml",
+        "source": "/Users/priyanshupatra/.gradle/caches/transforms-3/acbce933e4b464a5224ed377a62db1f5/transformed/core-1.6.0/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/flutter_fintech_app/build/path_provider_android/intermediates/merged_res/release/drawable/notification_bg_low.xml",
+        "source": "/Users/priyanshupatra/.gradle/caches/transforms-3/acbce933e4b464a5224ed377a62db1f5/transformed/core-1.6.0/res/drawable/notification_bg_low.xml"
+    }
+]

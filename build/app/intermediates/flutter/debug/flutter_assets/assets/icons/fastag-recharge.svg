@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50.325" height="46.36" viewBox="0 0 50.325 46.36">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_529" data-name="Group 529" transform="translate(-8532.873 -237.04)">
+    <g id="Light" transform="translate(8532.873 237.04)">
+      <rect id="Rectangle_1606" data-name="Rectangle 1606" width="35" height="2" rx="1" transform="translate(6.663)" fill="#fff"/>
+      <path id="Path_1078" data-name="Path 1078" d="M45.638,47,38.044,91.36H88.369L79,47Z" transform="translate(-38.044 -45)" opacity="0.5" fill="url(#linear-gradient)"/>
+    </g>
+    <path id="noun-truck-4865733" d="M125.326,108.483a2.164,2.164,0,1,1-.634-1.53A2.164,2.164,0,0,1,125.326,108.483Zm6.492,0a2.164,2.164,0,1,0,.634-1.53A2.165,2.165,0,0,0,131.819,108.483Zm-15.149-2.164V95.5a2.164,2.164,0,0,1,2.164-2.164h8.657a2.164,2.164,0,0,1,2.164,2.164v.968a.541.541,0,0,0,.541.541h4.794a2.164,2.164,0,0,1,1.8.964l1.158,1.737h0a2.164,2.164,0,0,1,.363,1.2v5.411h0a2.139,2.139,0,0,1-.312,1.115.224.224,0,0,1-.4-.052,3.782,3.782,0,0,0-7.374.64.534.534,0,0,1-.534.462h-2.235a.534.534,0,0,1-.534-.462,3.787,3.787,0,0,0-7.518,0,.534.534,0,0,1-.534.462h-.035a2.164,2.164,0,0,1-2.164-2.164Zm12.985-4.869a.541.541,0,0,0,.541.541h6.583a.451.451,0,0,0,.451-.451v-.63a1.082,1.082,0,0,0-.182-.6l-1.158-1.738a1.082,1.082,0,0,0-.9-.482H130.2a.541.541,0,0,0-.541.541Z" transform="translate(8430.975 165.582)" fill="none" stroke="#fff" stroke-width="0.5" opacity="0.5"/>
+  </g>
+</svg>

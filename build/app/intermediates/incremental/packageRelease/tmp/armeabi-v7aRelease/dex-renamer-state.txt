@@ -1,0 +1,4 @@
+#Mon Jun 06 16:52:06 IST 2022
+base.0=/Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/flutter_fintech_app/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

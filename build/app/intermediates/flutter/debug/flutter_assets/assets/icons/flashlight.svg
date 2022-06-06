@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34.432" height="31.72" viewBox="0 0 34.432 31.72">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_517" data-name="Group 517" transform="translate(-49.03 -755.027)">
+    <g id="Light" transform="translate(49.03 755.027)">
+      <rect id="Rectangle_1606" data-name="Rectangle 1606" width="23.947" height="1.368" rx="0.684" transform="translate(4.559)" fill="#fff"/>
+      <path id="Path_1078" data-name="Path 1078" d="M43.24,47l-5.2,30.351H72.476L66.064,47Z" transform="translate(-38.044 -45.632)" opacity="0.5" fill="url(#linear-gradient)"/>
+    </g>
+    <path id="Path_1095" data-name="Path 1095" d="M247.286,41.869a.732.732,0,0,1-.1-.007.473.473,0,0,1-.452-.416V33.4H242.86a.615.615,0,0,1-.456-.184.342.342,0,0,1-.061-.392l5.532-11.012a.6.6,0,0,1,.617-.265.473.473,0,0,1,.452.417V30.01h3.872a.615.615,0,0,1,.456.184.342.342,0,0,1,.061.392L247.8,41.6a.571.571,0,0,1-.516.271Zm-3.62-9.318h3.62a.5.5,0,0,1,.553.424v6.19l4.173-8.307h-3.62a.5.5,0,0,1-.553-.424v-6.19Z" transform="translate(-182.27 744.461)" fill="#fff" opacity="0.5"/>
+  </g>
+</svg>

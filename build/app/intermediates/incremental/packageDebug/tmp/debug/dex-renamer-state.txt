@@ -1,0 +1,4 @@
+#Sun Jun 05 00:44:29 IST 2022
+base.0=/Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/flutter_fintech_app/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

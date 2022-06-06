@@ -11,8 +11,17 @@ class _PayPageState extends State<PayPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(
+      appBar: CustomAppBar(
         title: "pay all your bills\nat one place.",
+        showBackButton: false,
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (BuildContext context) => const ProfilePage(),
+            ),
+          );
+        },
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -22,7 +31,14 @@ class _PayPageState extends State<PayPage> {
               Align(
                 alignment: Alignment.topRight,
                 child: SideActionButton(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => const CashbackPage(),
+                      ),
+                    );
+                  },
                   isLeftCircularBorder: true,
                   leadingIcon: SvgPicture.asset(
                     "assets/icons/cashback.svg",
@@ -161,7 +177,7 @@ class _PayPageState extends State<PayPage> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute<void>(
+                      MaterialPageRoute(
                         builder: (BuildContext context) =>
                             const PaymentHistory(),
                       ),

@@ -10,7 +10,18 @@ class _PaymentHistoryState extends State<PaymentHistory> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(title: "payment\nhistory."),
+      appBar: CustomAppBar(
+        title: "payment\nhistory.",
+        showBackButton: true,
+        onTap: () {
+          Navigator.pop(
+            context,
+            MaterialPageRoute(
+              builder: (BuildContext context) => const PayPage(),
+            ),
+          );
+        },
+      ),
       body: Padding(
         padding: kSinglePad,
         child: ListView.separated(
@@ -23,6 +34,7 @@ class _PaymentHistoryState extends State<PaymentHistory> {
               icon: SvgPicture.asset("assets/icons/transaction.svg"),
               titleText: "Amit",
               subtitleText: "February 1, 2022",
+              isReceivedMoney: false,
               deductedMoney: "-₹330",
               category: "upi",
             );

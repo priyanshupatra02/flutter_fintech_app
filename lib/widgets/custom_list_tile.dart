@@ -7,8 +7,8 @@ class CustomListTile extends StatelessWidget {
   final String titleText;
   final String subtitleText;
   final String deductedMoney;
+  final bool isReceivedMoney;
   final String category;
-  
 
   const CustomListTile({
     Key? key,
@@ -19,7 +19,7 @@ class CustomListTile extends StatelessWidget {
     required this.subtitleText,
     required this.deductedMoney,
     required this.category,
-    
+    required this.isReceivedMoney,
   }) : super(key: key);
 
   @override
@@ -67,7 +67,7 @@ class CustomListTile extends StatelessWidget {
               SizedBox(
                 child: Text(
                   deductedMoney,
-                  style: deductedMoneyText,
+                  style: isReceivedMoney ? receivedMoneyText : deductedMoneyText,
                 ),
               ),
               SizedBox(

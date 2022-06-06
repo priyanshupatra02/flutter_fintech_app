@@ -28,7 +28,8 @@ class YourBillsStatus extends StatelessWidget {
           icon,
           SizedBox(height: getDeviceWidth(25)),
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+            padding: EdgeInsets.symmetric(
+                horizontal: getDeviceWidth(15), vertical: getDeviceHeight(5)),
             decoration: BoxDecoration(
               borderRadius: kHalfCurve,
               color: kIconBgColor,

@@ -4,12 +4,12 @@ import 'package:flutter_fintech_app/utilities/import.dart';
 const Color kPrimaryBgColor = Color(0xFF212121);
 const Color kAppBarColor = Color(0xFF2E2E2E); // For appBar & stuffs.
 const Color kSecondaryColor = Color(0xFFFFFFFF);
-
 const Color kSecondaryLightColor = Color(0xFF585757); // For bottom modal sheet.
 const Color kIconColor = Color(0xFF959595);
 const Color kIconBgColor = Color(0xFF222121);
 const Color kTileColor = Color(0xFF3D3C3C);
 const Color kBorderColor = Color(0xFFFF006F);
+const Color kAvatarBorderColor = Color(0xFF6C6C6C);
 Color kPageIndicator = Colors.grey.shade800;
 Color bottomNavBarColor = const Color(0xFF000000).withOpacity(0.3);
 
@@ -60,14 +60,14 @@ const Color kInfoTextColor = Color(0xFF83838F); // For onboarding screen texts.
 // Text styles
 TextStyle kHeadingText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(17),
-  letterSpacing: 0.5,
+  letterSpacing: getDeviceWidth(0.5),
   fontWeight: FontWeight.bold,
 ); // used for your bills, rent & education etc.
 
 TextStyle kFavouriteNames = GoogleFonts.poppins(
   fontSize: getDeviceWidth(9),
   fontWeight: FontWeight.w400,
-  letterSpacing: 0.5,
+  letterSpacing: getDeviceWidth(0.5),
 );
 
 TextStyle kSmallHeadingText = GoogleFonts.poppins(
@@ -80,6 +80,12 @@ TextStyle kPrimaryInfoText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(9),
   fontWeight: FontWeight.bold,
   color: kInfoTextColor,
+);
+
+TextStyle kMoneytext = GoogleFonts.poppins(
+  fontSize: getDeviceWidth(50),
+  letterSpacing: 1.5,
+  fontWeight: FontWeight.w400,
 );
 
 TextStyle kSecondaryInfoText = GoogleFonts.poppins(
@@ -101,13 +107,14 @@ TextStyle categoryHeadingStyle = GoogleFonts.poppins(
 
 TextStyle buttonText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(18),
-  fontWeight: FontWeight.bold,
+  letterSpacing: 0.5,
+  fontWeight: FontWeight.w500, //medium
 );
 
 TextStyle kAppbarTitleText = GoogleFonts.poppins(
-  fontSize: getDeviceWidth(17),
-  height: 1.5,
-  letterSpacing: 1,
+  fontSize: getDeviceWidth(15),
+  height: getDeviceHeight(1.2),
+  letterSpacing: getDeviceWidth(1),
   fontWeight: FontWeight.bold,
 );
 
@@ -118,33 +125,33 @@ TextStyle primaryListTitleText = GoogleFonts.poppins(
 
 TextStyle primaryListSubtitleText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(10),
-  letterSpacing: 0.5,
+  letterSpacing: getDeviceWidth(0.5),
   fontWeight: FontWeight.w400, //regular
   color: kSecondaryLightTextColor,
 );
 
 TextStyle secondaryListTitleText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(12),
-  letterSpacing: 0.75,
+  letterSpacing: getDeviceWidth(0.75),
   fontWeight: FontWeight.w600, //semi-bold
 );
 
 TextStyle secondaryListSubtitleText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(10),
-  letterSpacing: 0.5,
+  letterSpacing: getDeviceWidth(0.5),
   fontWeight: FontWeight.w300, // light
   color: kSecondaryLightTextColor,
 );
 
 TextStyle iconLabelText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(7.5),
-  letterSpacing: 0.75,
+  letterSpacing: getDeviceWidth(0.75),
   fontWeight: FontWeight.w600, //semi-bold
 );
 
 TextStyle buttonTitleText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(10),
-  letterSpacing: 2,
+  letterSpacing: getDeviceWidth(2),
   fontWeight: FontWeight.w600, //semi-bold
 );
 
@@ -161,16 +168,22 @@ TextStyle receivedMoneyText = GoogleFonts.poppins(
 
 TextStyle buttonSubtitleText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(7),
-  letterSpacing: 2,
+  letterSpacing: getDeviceWidth(2),
   fontWeight: FontWeight.w300, //light
   color: kSecondaryLightTextColor,
 );
 
 TextStyle payCardsLabelText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(10),
-  letterSpacing: 0.5,
+  letterSpacing: getDeviceWidth(0.5),
   fontWeight: FontWeight.w500, //medium
 ); // for send/receive/add money labels
+
+TextStyle bodyText = GoogleFonts.poppins(
+  fontSize: getDeviceWidth(20),
+  letterSpacing: getDeviceWidth(0.5),
+  fontWeight: FontWeight.w500, //semi-bold
+); // like no notification title, request monet title
 
 //padding
 // EdgeInsets.all Padding Constants on this Project
