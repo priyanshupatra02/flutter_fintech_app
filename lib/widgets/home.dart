@@ -26,7 +26,6 @@ class _HomeState extends State<Home> {
         children: const [
           HomePage(),
           PayPage(),
-          InvestmentPage(),
           CardsPage(),
           MonitoringPage(),
         ],

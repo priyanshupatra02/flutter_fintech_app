@@ -31,7 +31,6 @@ export 'package:flutter_fintech_app/screens/homepage/request_money.dart';
 
 // nav bar destinations
 export 'package:flutter_fintech_app/screens/cards/cards.dart';
-export 'package:flutter_fintech_app/screens/investment/investment_page.dart';
 export 'package:flutter_fintech_app/screens/monitoring/monitoring.dart';
 export 'package:flutter_fintech_app/screens/pay/pay_page.dart';
 
