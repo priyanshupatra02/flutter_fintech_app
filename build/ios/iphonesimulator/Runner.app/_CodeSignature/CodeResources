@@ -110,7 +110,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		XQ9IGL1zdUE3/MxHUSqnhXUlgiY=
+		apeQ5mcSuT6c1BwOG4rmkyVx+kc=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -118,11 +118,11 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		MSEVtAxTex1pBecx+lHUT/759v4=
+		bZmZHC6BEQWC2iN/tba3Mogh5sA=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		DK/1kjneN4oDh02C4C2WGhwBjds=
+		D2UWj/IiTmBYMHlMnt0Y9pbH0Fo=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
@@ -219,6 +219,10 @@
 		<key>Frameworks/App.framework/flutter_assets/assets/icons/gallery.svg</key>
 		<data>
 		ziBNFDHGGtXoj8BADbBPz3gN5ds=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/icons/go-to-icon.png</key>
+		<data>
+		kmy6OGjZIvk2gYPhVjleLC9F7Aw=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/icons/go-to-icon.svg</key>
 		<data>
@@ -638,7 +642,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		EcpDM9viYwcrBPHYBdM6njgdbjs=
+		bNb5gjumih6SeKQ/8kzgnYTyBmI=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -833,7 +837,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dEOc29onZnyLrLj5De4UYc4kYdemeaSFj6Uehju6ArI=
+			2IX6rdhYgGh6Qq5zJMD3OSPO+sB0EUcWIZ4rpSCu17s=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -847,14 +851,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QleHmHAkt7Nj5tlJGHYy5MnXkAPOPM9UFrn66hotzf8=
+			eNTCJMoglwpf8k6tzkt2NHibN9/v4bh+ah2S6Q+/B+k=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LzJ8qlDUGYEt/ZSR0jipO7hYuCZLz9dz7rygdM0ctmM=
+			PMHgRT/LhxtzwGaQkmkhPLPoTUUfCyaOjU9d8aDm5h4=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
@@ -1023,6 +1027,13 @@
 			<key>hash2</key>
 			<data>
 			4Yd+cVTrvjhsAIVCZT3mxt94tqg8LZP0wj5odEAoFZY=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/icons/go-to-icon.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			S5hzXdFw9SJXasDqCTSUYzhnYkWp0AfB8b/E5hbTm3s=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/icons/go-to-icon.svg</key>
