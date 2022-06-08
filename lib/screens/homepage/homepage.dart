@@ -157,7 +157,15 @@ class _HomePageState extends State<HomePage> {
                       "assets/icons/send-money.svg",
                       color: kSecondaryColor.withOpacity(0.5),
                     ),
-                   onTap:  () {},
+                   onTap:  () {
+                     Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const ShowContacts(),
+                        ),
+                      );
+                   },
                   ),
                   _buildPayCards(
                      text:  "request\nmoney",
@@ -169,7 +177,7 @@ class _HomePageState extends State<HomePage> {
                         Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (BuildContext context) => const RequestMoneyPage(),
+                          builder: (BuildContext context) => const ShowContacts(),
                         ),
                       );
                       },),

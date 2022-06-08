@@ -2,13 +2,13 @@ import 'package:flutter_fintech_app/utilities/import.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSize {
   final String title;
-  final Function()? onTap;
+  final Function() onTap;
   final bool showBackButton;
   final Color? backgroundColor;
   const CustomAppBar({
     Key? key,
     required this.title,
-    this.onTap,
+    required this.onTap,
     required this.showBackButton,
     this.backgroundColor = kAppBarColor,
   }) : super(key: key);

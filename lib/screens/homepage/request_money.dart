@@ -5,6 +5,7 @@ class RequestMoneyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isIOS = Theme.of(context).platform == TargetPlatform.iOS;
     String requestAmount = "20,445";
     return Scaffold(
       body: SafeArea(
@@ -16,7 +17,7 @@ class RequestMoneyPage extends StatelessWidget {
                   Navigator.pop(
                     context,
                     MaterialPageRoute(
-                      builder: (BuildContext context) => const HomePage(),
+                      builder: (BuildContext context) => const ShowContacts(),
                     ),
                   );
                 },

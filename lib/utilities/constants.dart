@@ -32,11 +32,13 @@ LinearGradient kPrimaryDarkGradientColor = LinearGradient(
   ],
   stops: const [0.002, 0.6],
 ); // for debit cards & list tiles
-
-const LinearGradient kSecondaryGradientColor = LinearGradient(
+LinearGradient kSecondaryGradientColor = LinearGradient(
   begin: Alignment.topCenter,
   end: Alignment.bottomCenter,
-  colors: [Color(0xFF328AF5), Color(0xFF171E93)],
+  colors: [
+    const Color(0xFF328AF5).withOpacity(0.7),
+    const Color(0xFF171E93).withOpacity(0.7),
+  ],
 ); // for buttons.
 
 const LinearGradient kTertiaryGradientColor = LinearGradient(
@@ -185,6 +187,25 @@ TextStyle bodyText = GoogleFonts.poppins(
   fontWeight: FontWeight.w500, //semi-bold
 ); // like no notification title, request monet title
 
+TextStyle hintTextStyle = GoogleFonts.poppins(
+  fontSize: getDeviceWidth(18),
+  letterSpacing: getDeviceWidth(0.5),
+  fontWeight: FontWeight.w500, //medium
+  color: kPrimaryTextColor.withOpacity(0.2),
+);
+
+TextStyle contactNameTextStyle = GoogleFonts.poppins(
+  fontSize: getDeviceWidth(13),
+  letterSpacing: getDeviceWidth(0.75),
+  fontWeight: FontWeight.w500, //medium
+);
+
+TextStyle contactNumberTextStyle = GoogleFonts.poppins(
+  fontSize: getDeviceWidth(12),
+  letterSpacing: getDeviceWidth(1),
+  fontWeight: FontWeight.w400, //medium
+);
+
 //padding
 // EdgeInsets.all Padding Constants on this Project
 EdgeInsetsGeometry kQuatPad = EdgeInsets.all(getDeviceWidth(5));
@@ -260,6 +281,7 @@ Border whiteBorder = const Border(
 // Form Error
 // final RegExp emailValidatorRegExp =
 //     RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
+// add a regex regarding upi id
 const String kEmailNullError = "Please Enter your email";
 const String kInvalidEmailError = "Please Enter Valid Email";
 const String kPassNullError = "Please Enter your password";

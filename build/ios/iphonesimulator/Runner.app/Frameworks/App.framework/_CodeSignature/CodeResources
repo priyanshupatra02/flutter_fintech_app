@@ -10,7 +10,7 @@
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		46e/CI5Ya9/agNbNbTQzTg9z+FA=
+		DK/1kjneN4oDh02C4C2WGhwBjds=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
-		dzjSq0E7FSlKC7SHIkapXTYzzk4=
+		mhEU6Ws5CTXfmsm7ChFMRCV3t04=
 		</data>
 		<key>flutter_assets/assets/icons/.DS_Store</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>flutter_assets/assets/icons/go-to-icon.svg</key>
 		<data>
-		uOf0recuwBfeNNxSLZhPDSwqlxU=
+		RsEGGwtzLC+BOiuzwE81VoiRXWM=
 		</data>
 		<key>flutter_assets/assets/icons/help-and-support.svg</key>
 		<data>
@@ -203,6 +203,10 @@
 		<key>flutter_assets/assets/icons/screen-lock.svg</key>
 		<data>
 		M2HZqSfaEGSo8kbvOD3ckiGdBNM=
+		</data>
+		<key>flutter_assets/assets/icons/search.svg</key>
+		<data>
+		L2PzbSGgXmIyR7GQHNm/B0258nA=
 		</data>
 		<key>flutter_assets/assets/icons/security-deposit.svg</key>
 		<data>
@@ -414,7 +418,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		qZgTbduhDLp63Hq2m/o24UWKRNI=
+		HQSSitN5zBWcJaBzU0AW6DuLPxE=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -431,7 +435,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vQfu1D0kiLWz4eyceAVJd6D/MR0tfmv5whs6TvoOqSI=
+			LzJ8qlDUGYEt/ZSR0jipO7hYuCZLz9dz7rygdM0ctmM=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -445,7 +449,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yxQAlZe1MQ7ql+SrVx5IStUXoFmpuIJNP1yP+phqEkU=
+			5xjvxJ77RWpLdsdsCRGzHmnNUswBBGOMLPsm9D2JFb0=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/icons/about.svg</key>
@@ -606,7 +610,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7Z+igrk4vqGvoVQfrVR8CbyYtadcnkL6g6VUvdMHCFE=
+			Zn2z7c7Ig+r/f5rrZdiYZVglSqFXXsJz11xNgfxbTvA=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/icons/help-and-support.svg</key>
@@ -761,6 +765,13 @@
 			<key>hash2</key>
 			<data>
 			oTfQkJrxwvx63YAcRJiJL/mH9oYR6bMyhbH8fUw6fZU=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/icons/search.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fmFOjARAU4SVHcVhSCbz2/79IFiuzOixpZPyN39Y7IQ=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/icons/security-deposit.svg</key>
@@ -1117,7 +1128,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xultNoOdYZo0T33KnOfs5MVL7KZB//dRREpREqtU0jE=
+			aEIWfbU9yCQ6uouuc6xZI/4kCdrsxwmQZyGAlI9al3I=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>

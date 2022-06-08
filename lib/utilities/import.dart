@@ -2,6 +2,8 @@
 export 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
 export 'package:flutter/services.dart';
 export 'package:flutter/foundation.dart';
+// export 'package:flutter/cupertino.dart';
+export 'dart:typed_data';
 export 'dart:math';
 
 // Utilities
@@ -15,6 +17,7 @@ export 'package:lottie/lottie.dart';
 export 'package:smooth_page_indicator/smooth_page_indicator.dart';
 export 'package:provider/provider.dart';
 export 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
+export 'package:flutter_contacts/flutter_contacts.dart';
 
 // Screens
 export 'package:flutter_fintech_app/main.dart';
@@ -26,8 +29,7 @@ export 'package:flutter_fintech_app/screens/homepage/scan_qr.dart';
 export 'package:flutter_fintech_app/screens/profile/profile_page.dart';
 export 'package:flutter_fintech_app/screens/homepage/notification_page.dart';
 export 'package:flutter_fintech_app/screens/homepage/request_money.dart';
-
-
+export 'package:flutter_fintech_app/screens/homepage/show_contacts.dart';
 
 // nav bar destinations
 export 'package:flutter_fintech_app/screens/cards/cards.dart';

@@ -1,0 +1,11 @@
+version: "Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)"
+options: "d587bc40a4a75e5d4ae77b2063253da7ef624d0b6946f6e8c2da19257daccb25"
+build_start_time: [1654698123, 66270828]
+build_end_time: [1654698132, 928595066]
+inputs:
+  ? "/Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/flutter_fintech_app/macos/Flutter/GeneratedPluginRegistrant.swift"
+  : [1654698067, 269055604]
+  ? "/Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/flutter_fintech_app/macos/Runner/AppDelegate.swift"
+  : [1644454869, 0]
+  ? "/Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/flutter_fintech_app/macos/Runner/MainFlutterWindow.swift"
+  : [1644454869, 0]

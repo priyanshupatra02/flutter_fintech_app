@@ -67,7 +67,8 @@ class CustomListTile extends StatelessWidget {
               SizedBox(
                 child: Text(
                   deductedMoney,
-                  style: isReceivedMoney ? receivedMoneyText : deductedMoneyText,
+                  style:
+                      isReceivedMoney ? receivedMoneyText : deductedMoneyText,
                 ),
               ),
               SizedBox(

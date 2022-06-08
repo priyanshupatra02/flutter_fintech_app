@@ -18,6 +18,9 @@ class MyApp extends StatelessWidget {
       title: 'Fintech App',
       theme: ThemeData(
         // TODO: more about typography class in flutter
+        // TODO: remove splash effect from buttons
+        // TODO: add isPhoneRooted
+        // TODO: add both circular progress indicator & cpupertino indicator
         primaryTextTheme: Typography(platform: TargetPlatform.iOS).white,
         textTheme: Typography(platform: TargetPlatform.iOS).white,
         splashColor: Colors.transparent,
@@ -50,3 +53,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+

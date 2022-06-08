@@ -5,6 +5,7 @@
     "version": "0.2.0",
     "configurations": [
     
+    
         {
             "name": "flutter_fintech_app",
             "request": "launch",
