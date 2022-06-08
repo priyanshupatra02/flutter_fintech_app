@@ -45,3 +45,6 @@ pubspec.lock # library relate lock files
 **/ios/Flutter/Flutter.framework
 **/ios/Flutter/Flutter.podspec
 **/ios/Flutter/Generated.xcconfig
+
+
+.gitignore
