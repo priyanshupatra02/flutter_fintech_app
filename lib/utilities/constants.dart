@@ -32,12 +32,12 @@ LinearGradient kPrimaryDarkGradientColor = LinearGradient(
   ],
   stops: const [0.002, 0.6],
 ); // for debit cards & list tiles
-LinearGradient kSecondaryGradientColor = LinearGradient(
+const LinearGradient kSecondaryGradientColor = LinearGradient(
   begin: Alignment.topCenter,
   end: Alignment.bottomCenter,
   colors: [
-    const Color(0xFF328AF5).withOpacity(0.7),
-    const Color(0xFF171E93).withOpacity(0.7),
+    Color(0xFF328AF5),
+    Color(0xFF171E93),
   ],
 ); // for buttons.
 

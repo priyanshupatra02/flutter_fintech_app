@@ -49,8 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return const Scaffold(
-      body: Home(),
+      body: SendMoneyPage(),
     );
   }
 }
-

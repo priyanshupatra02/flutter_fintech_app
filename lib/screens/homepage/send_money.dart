@@ -1,11 +1,16 @@
 import 'package:flutter_fintech_app/utilities/import.dart';
 
-class RequestMoneyPage extends StatelessWidget {
-  const RequestMoneyPage({Key? key}) : super(key: key);
+class SendMoneyPage extends StatefulWidget {
+  const SendMoneyPage({Key? key}) : super(key: key);
 
   @override
+  State<SendMoneyPage> createState() => _SendMoneyPageState();
+}
+
+class _SendMoneyPageState extends State<SendMoneyPage> {
+  @override
   Widget build(BuildContext context) {
-    String requestAmount = "20,445";
+    String sendAmount = "2,044";
     return Scaffold(
       body: SafeArea(
         child: Center(
@@ -29,7 +34,7 @@ class RequestMoneyPage extends StatelessWidget {
                 ),
               ),
               Text(
-                "request money to Elina.",
+                "send money to Elina.",
                 style: bodyText,
               ),
               SizedBox(
@@ -73,7 +78,7 @@ class RequestMoneyPage extends StatelessWidget {
                   SizedBox(width: getDeviceWidth(5)),
                   //TODO: ADd text form field below
                   Text(
-                    requestAmount,
+                    sendAmount,
                     style: kMoneytext,
                   ),
                 ],
@@ -102,14 +107,26 @@ class RequestMoneyPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: getDeviceHeight(100)),
-              ActionButton(
-                enableShadow: false,
-                minWidth: getDeviceWidth(230),
-                minHeight: getDeviceHeight(45),
-                labelText: "request money.",
-              ),
             ],
           ),
+        ),
+      ),
+      bottomSheet: Positioned(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Divider(
+              color: kSecondaryLightColor,
+              height: getDeviceHeight(20),
+              thickness: 3,
+              indent: getDeviceWidth(150),
+              endIndent: getDeviceWidth(150),
+            ),
+            Container(
+              height: getDeviceHeight(250),
+              color: Colors.deepOrangeAccent,
+            ),
+          ],
         ),
       ),
     );
