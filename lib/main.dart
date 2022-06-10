@@ -1,3 +1,4 @@
+import 'package:flutter_fintech_app/screens/homepage/add_money_to_wallet_page.dart';
 import 'package:flutter_fintech_app/utilities/import.dart';
 
 void main() {
@@ -55,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return const Scaffold(
-      body: SendMoneyPage(),
+      body: AddMoneyToWallet(),
     );
   }
 }

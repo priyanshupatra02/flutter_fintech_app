@@ -1,15 +1,15 @@
 import 'package:flutter_fintech_app/utilities/import.dart';
 
-class SendMoneyPage extends StatefulWidget {
-  const SendMoneyPage({Key? key}) : super(key: key);
+class AddMoneyToWallet extends StatefulWidget {
+  const AddMoneyToWallet({Key? key}) : super(key: key);
 
   @override
-  State<SendMoneyPage> createState() => _SendMoneyPageState();
+  State<AddMoneyToWallet> createState() => _AddMoneyToWalletState();
 }
 
-class _SendMoneyPageState extends State<SendMoneyPage> {
+class _AddMoneyToWalletState extends State<AddMoneyToWallet> {
   int? selectedValue = 0;
-  String sendMoney = "2,099";
+  String sendMoney = "1,400";
   final dropDownItems = [
     "Axis .****8354",
     "State Bank .****3827",
@@ -17,7 +17,6 @@ class _SendMoneyPageState extends State<SendMoneyPage> {
     "ICICI .****1093",
   ];
   String? value;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +43,7 @@ class _SendMoneyPageState extends State<SendMoneyPage> {
                   ),
                 ),
                 Text(
-                  "send money to Elina.",
+                  "adding money to wallet.",
                   style: bodyText,
                 ),
                 SizedBox(
@@ -52,21 +51,10 @@ class _SendMoneyPageState extends State<SendMoneyPage> {
                 ),
 
                 // profile icon
-                DashedCircle(
-                  dashes: getDeviceWidth(15),
-                  color: kAvatarBorderColor,
-                  gapSize: getDeviceWidth(5),
-                  strokeWidth: getDeviceWidth(1.0),
-                  child: CircleAvatar(
-                    backgroundColor: kAvatarBorderColor,
-                    radius: getDeviceWidth(53),
-                    child: CircleAvatar(
-                      radius: getDeviceWidth(50),
-                      backgroundImage: const NetworkImage(
-                        "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
-                      ),
-                    ),
-                  ),
+                SvgPicture.asset(
+                  "assets/icons/wallet.svg",
+                  height: getDeviceHeight(80),
+                  width: getDeviceWidth(80),
                 ),
                 SizedBox(
                   height: getDeviceHeight(50),
@@ -96,26 +84,6 @@ class _SendMoneyPageState extends State<SendMoneyPage> {
 
                 // "what's this for" icon
                 //TODO: add text field below
-                Container(
-                  padding: EdgeInsets.symmetric(
-                      horizontal: getDeviceHeight(20),
-                      vertical: getDeviceWidth(15)),
-                  decoration: BoxDecoration(
-                    borderRadius: kHalfCurve,
-                    color: kSecondaryLightColor.withOpacity(0.5),
-                  ),
-                  child: FittedBox(
-                    child: Text(
-                      "what's this for?",
-                      style: GoogleFonts.poppins(
-                        fontSize: getDeviceWidth(15),
-                        letterSpacing: getDeviceWidth(0.5),
-                        fontWeight: FontWeight.w500, //medium text
-                        color: kSecondaryColor.withOpacity(0.5),
-                      ),
-                    ),
-                  ),
-                ),
               ],
             ),
           ),
@@ -133,11 +101,13 @@ class _SendMoneyPageState extends State<SendMoneyPage> {
           ),
           Container(
             padding: kSinglePad,
-            height: getDeviceHeight(270),
+            height: getDeviceHeight(250),
+            alignment: Alignment.center,
             width: double.infinity,
             color: kTileColor,
             child: Column(
-             crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   "pay using",
@@ -196,9 +166,13 @@ class _SendMoneyPageState extends State<SendMoneyPage> {
                           TextButton(
                             //TODO: remove splash effect
                             onPressed: () {},
-                            child: const Text(
+                            child: Text(
                               "check balance",
-                              style: TextStyle(color: kSecondaryLightTextColor),
+                              style: GoogleFonts.poppins(
+                                fontSize: getDeviceWidth(12),
+                                fontWeight: FontWeight.w500,
+                                color: kSecondaryLightTextColor,
+                              ),
                             ),
                           ),
                         ],
@@ -207,29 +181,15 @@ class _SendMoneyPageState extends State<SendMoneyPage> {
                   ),
                   onChanged: (value) => setState(() => selectedValue = value),
                 ),
-                RadioListTile<int>(
-                  value: 2,
-                  groupValue: selectedValue,
-                  title: Text(
-                    "wallet",
-                    style: contactNameTextStyle,
-                  ),
-                  subtitle: Text(
-                    "${rupee} 2,777",
-                    style: GoogleFonts.poppins(
-                      fontSize: getDeviceWidth(12),
-                      fontWeight: FontWeight.w500,
-                      color: kDropDownItemColor,
-                    ),
-                  ),
-                  onChanged: (value) => setState(() => selectedValue = value),
+                SizedBox(
+                  height: getDeviceHeight(20),
                 ),
                 Align(
                   alignment: Alignment.center,
                   child: ActionButton(
                     minWidth: getDeviceWidth(250),
                     minHeight: getDeviceHeight(45),
-                    labelText: "send money.",
+                    labelText: "add money.",
                     enableShadow: false,
                   ),
                 ),
