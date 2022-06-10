@@ -12,7 +12,7 @@ const Color kBorderColor = Color(0xFFFF006F);
 const Color kAvatarBorderColor = Color(0xFF6C6C6C);
 Color kPageIndicator = Colors.grey.shade800;
 Color bottomNavBarColor = const Color(0xFF000000).withOpacity(0.3);
-
+Color kDropDownItemColor = const Color(0xFFA8A8A8);
 // Shadow Colors
 const Color kShadowPrimaryDeep = Color(0xFF151515);
 const Color kShadowPrimaryLight = Color(0xFF224ABB);

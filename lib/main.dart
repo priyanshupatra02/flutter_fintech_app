@@ -24,9 +24,15 @@ class MyApp extends StatelessWidget {
         primaryTextTheme: Typography(platform: TargetPlatform.iOS).white,
         textTheme: Typography(platform: TargetPlatform.iOS).white,
         splashColor: Colors.transparent,
+        radioTheme: RadioThemeData(
+          fillColor: MaterialStateColor.resolveWith(
+            (states) => kSecondaryColor,
+          ),
+        ),
         bottomSheetTheme: const BottomSheetThemeData(
           backgroundColor: Colors.transparent,
         ),
+
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: kPrimaryBgColor,
       ),
@@ -53,4 +59,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
