@@ -8,12 +8,14 @@ class SendMoneyPage extends StatefulWidget {
 }
 
 class _SendMoneyPageState extends State<SendMoneyPage> {
+  int? selectedValue = 0;
+  String sendMoney = "2,099";
   @override
   Widget build(BuildContext context) {
-    String sendAmount = "2,044";
     return Scaffold(
       body: SafeArea(
-        child: Center(
+          child: Scaffold(
+        body: Center(
           child: Column(
             children: [
               GestureDetector(
@@ -78,7 +80,7 @@ class _SendMoneyPageState extends State<SendMoneyPage> {
                   SizedBox(width: getDeviceWidth(5)),
                   //TODO: ADd text form field below
                   Text(
-                    sendAmount,
+                    sendMoney,
                     style: kMoneytext,
                   ),
                 ],
@@ -106,28 +108,53 @@ class _SendMoneyPageState extends State<SendMoneyPage> {
                   ),
                 ),
               ),
-              SizedBox(height: getDeviceHeight(100)),
             ],
           ),
         ),
-      ),
-      bottomSheet: Positioned(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Divider(
-              color: kSecondaryLightColor,
-              height: getDeviceHeight(20),
-              thickness: 3,
-              indent: getDeviceWidth(150),
-              endIndent: getDeviceWidth(150),
+      )),
+      bottomSheet: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Divider(
+            color: kSecondaryLightColor,
+            height: getDeviceHeight(20),
+            thickness: 3,
+            indent: getDeviceWidth(150),
+            endIndent: getDeviceWidth(150),
+          ),
+          Container(
+            height: getDeviceHeight(220),
+            color: Colors.deepOrangeAccent,
+            child: ListView(
+              children: [
+                RadioListTile<int>(
+                  value: 1,
+                  groupValue: selectedValue,
+                  title: Text("bank account"),
+                  subtitle: Text("Creative director, Photo stylist"),
+                  secondary: ElevatedButton(
+                    onPressed: () {},
+                    child: Text("data"),
+                  ),
+                  onChanged: (value) => setState(() => selectedValue = value),
+                ),
+                RadioListTile<int>(
+                  value: 2,
+                  groupValue: selectedValue,
+                  title: Text("gmail account"),
+                  subtitle: Row(children: [
+                    SvgPicture.asset("assetName")
+                  ],),
+                  secondary: ElevatedButton(
+                    onPressed: () {},
+                    child: Text("data"),
+                  ),
+                  onChanged: (value) => setState(() => selectedValue = value),
+                ),
+              ],
             ),
-            Container(
-              height: getDeviceHeight(250),
-              color: Colors.deepOrangeAccent,
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
