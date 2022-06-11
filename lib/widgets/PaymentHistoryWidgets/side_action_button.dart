@@ -21,7 +21,7 @@ class SideActionButton extends StatelessWidget {
   Widget build(BuildContext context) {
     //TODO: Add gesture detector here
     return Container(
-      padding: kQuatHalfPad,
+      padding: EdgeInsets.symmetric(horizontal: getDeviceWidth(15),vertical: getDeviceHeight(15)),
       decoration: BoxDecoration(
         gradient: kPrimaryDarkGradientColor,
         borderRadius: isLeftCircularBorder
@@ -36,9 +36,18 @@ class SideActionButton extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  titleText,
-                  style: secondaryListTitleText,
+                Row(
+                  children: [
+                    Text(
+                      titleText,
+                      style: secondaryListTitleText,
+                    ),
+                    SizedBox(width: getDeviceWidth(45)),
+                     GestureDetector(
+                      onTap: onTap,
+                      child: trailingIcon,
+                    ),
+                  ],
                 ),
                 SizedBox(height: getDeviceHeight(3)),
                 Text(
@@ -48,10 +57,7 @@ class SideActionButton extends StatelessWidget {
               ],
             ),
             SizedBox(width: getDeviceWidth(25)),
-            GestureDetector(
-              onTap: onTap,
-              child: trailingIcon,
-            ),
+           
           ],
         ),
       ),
