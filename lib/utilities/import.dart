@@ -49,4 +49,6 @@ export 'package:flutter_fintech_app/widgets/PaymentHistoryWidgets/side_action_bu
 export 'package:flutter_fintech_app/widgets/PaymentHistoryWidgets/your_bills_card.dart';
 export 'package:flutter_fintech_app/widgets/PaymentHistoryWidgets/pay_bills_category.dart';
 export 'package:flutter_fintech_app/widgets/dashed_rect.dart';
+export 'package:flutter_fintech_app/widgets/ProfileWidgets/debit_card.dart';
+
 

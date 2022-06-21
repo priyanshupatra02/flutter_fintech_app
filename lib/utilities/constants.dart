@@ -143,6 +143,7 @@ TextStyle secondaryListSubtitleText = GoogleFonts.poppins(
   letterSpacing: getDeviceWidth(0.5),
   fontWeight: FontWeight.w300, // light
   color: kSecondaryLightTextColor,
+  
 );
 
 TextStyle iconLabelText = GoogleFonts.poppins(

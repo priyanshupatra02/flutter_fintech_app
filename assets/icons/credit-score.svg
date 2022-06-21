@@ -1,10 +1,23 @@
-<svg id="Light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50.325" height="46.36" viewBox="0 0 50.325 46.36">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="62" height="62" viewBox="0 0 62 62">
   <defs>
     <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#fff"/>
       <stop offset="1" stop-color="#fff" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <rect id="Rectangle_1606" data-name="Rectangle 1606" width="35" height="2" rx="1" transform="translate(6.663)" fill="#fff"/>
-  <path id="Path_1078" data-name="Path 1078" d="M45.638,47,38.044,91.36H88.369L79,47Z" transform="translate(-38.044 -45)" opacity="0.5" fill="url(#linear-gradient)"/>
+  <g id="Group_578" data-name="Group 578" transform="translate(-15 -27)">
+    <g id="Light" transform="translate(20.837 27.04)">
+      <rect id="Rectangle_1606" data-name="Rectangle 1606" width="35" height="2" rx="1" transform="translate(6.663)" fill="#fff"/>
+      <path id="Path_1078" data-name="Path 1078" d="M45.638,47,38.044,91.36H88.369L79,47Z" transform="translate(-38.044 -45)" opacity="0.5" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Group_20" data-name="Group 20" transform="translate(15 27)">
+      <g id="Rectangle_261" data-name="Rectangle 261" fill="none" stroke="#fff" stroke-width="1" opacity="0.5">
+        <rect width="62" height="62" stroke="none"/>
+        <rect x="0.5" y="0.5" width="61" height="61" fill="none"/>
+      </g>
+      <g id="credit-card-swipe" transform="translate(14 20)" opacity="0.5">
+        <path id="Path_1072" data-name="Path 1072" d="M0,6.012,3.38,7.83,6.614,1.818,3.234,0,0,6.012Zm28.343,9.255a1.536,1.536,0,0,0,1.239-.624,1.545,1.545,0,1,0,0-1.843,1.545,1.545,0,1,0-1.239,2.467ZM14.95,20.251H33.726v1.025a.345.345,0,0,1-.1.25l0,0a.35.35,0,0,1-.25.1H15.3a.345.345,0,0,1-.25-.1l0,0a.35.35,0,0,1-.1-.25V20.251ZM33.726,17.2H14.95V15.163a10.515,10.515,0,0,0,1.9.582c2.006.368,2.866-1.172,1.649-2.722a8.622,8.622,0,0,0-3.366-2.22.357.357,0,0,1,.174-.045H33.372a.352.352,0,0,1,.236.09c.006.006.008.011.014.014a.355.355,0,0,1,.1.25V17.2Zm-.357,5.231H15.3a1.149,1.149,0,0,1-.812-.337h0a1.159,1.159,0,0,1-.34-.815V14.792a11.463,11.463,0,0,1-2-1.326l-2.97-.674a4.1,4.1,0,0,1-2.531-1.955,11.414,11.414,0,0,0-.761-1.349c-.61-.927-.115-.4-1.023-.961l-.674-.416c.5-1.365,2.444-4.6,3.144-5.906l2.3.73a45.761,45.761,0,0,0,6.6,1.689,3.21,3.21,0,0,1,2.186,1.495l1.975,3.838H33.369a1.133,1.133,0,0,1,.787.315l.028.025a1.151,1.151,0,0,1,.337.815V21.277a1.149,1.149,0,0,1-.337.812h0a1.147,1.147,0,0,1-.815.34ZM14.413,10.381l.076-.084h0a1.147,1.147,0,0,1,.815-.34h1.607c-.233-.292-.455-.587-.655-.888-.435-.655-.236-.531-1.056-.649-.421-.062-.846-.115-1.267-.152a3.572,3.572,0,0,0-.806.745,4.4,4.4,0,0,0,1.287,1.368Z" fill="none" stroke="#fff" stroke-width="0.5" fill-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
 </svg>

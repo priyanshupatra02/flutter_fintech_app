@@ -5,7 +5,7 @@
       <stop offset="1" stop-color="#fff" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <g id="Group_580" data-name="Group 580" transform="translate(-15 -27)">
+  <g id="Group_587" data-name="Group 587" transform="translate(-15 -27)">
     <g id="Light" transform="translate(20.837 27.04)">
       <rect id="Rectangle_1606" data-name="Rectangle 1606" width="35" height="2" rx="1" transform="translate(6.663)" fill="#fff"/>
       <path id="Path_1078" data-name="Path 1078" d="M45.638,47,38.044,91.36H88.369L79,47Z" transform="translate(-38.044 -45)" opacity="0.5" fill="url(#linear-gradient)"/>
@@ -15,9 +15,7 @@
         <rect width="62" height="62" stroke="none"/>
         <rect x="0.5" y="0.5" width="61" height="61" fill="none"/>
       </g>
-      <g id="address-location" transform="translate(20 20.192)" opacity="0.5">
-        <path id="Path_1076" data-name="Path 1076" d="M13.951,14.653a12.214,12.214,0,0,1-2.676,2.214.378.378,0,0,1-.43.014,15.111,15.111,0,0,1-3.723-3.321,11.833,11.833,0,0,1-2.5-5.4,7.175,7.175,0,0,1,.9-5.056A6.2,6.2,0,0,1,6.9,1.564,6.747,6.747,0,0,1,11.145,0,5.976,5.976,0,0,1,15.17,1.642,5.922,5.922,0,0,1,16.245,2.95a8.011,8.011,0,0,1,.765,5.794,12.738,12.738,0,0,1-3.059,5.9v.005ZM4.482,13.194a.635.635,0,1,1,0,1.271H3.289L1.717,19.54H19.989l-1.706-5.075H17.3a.635.635,0,1,1,0-1.271H19.19l2.56,7.613H0l2.358-7.613Zm6.383-9.918A3.164,3.164,0,1,1,7.7,6.439a3.165,3.165,0,0,1,3.163-3.163Z" transform="translate(0 0)" fill="#fff" fill-rule="evenodd"/>
-      </g>
+      <path id="noun-toggle-off-4247822" d="M157.1,175a5.429,5.429,0,1,0,0,10.857h9.65a5.429,5.429,0,1,0,0-10.857Zm0,9.048a3.619,3.619,0,1,0-3.619-3.619A3.619,3.619,0,0,0,157.1,184.048Z" transform="translate(-130.569 -149)" fill="#fff" fill-rule="evenodd" opacity="0.5"/>
     </g>
   </g>
 </svg>
