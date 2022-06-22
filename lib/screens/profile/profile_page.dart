@@ -399,7 +399,17 @@ class _ProfilePageState extends State<ProfilePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SvgPicture.asset("assets/icons/back.svg"),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => const Home(),
+                      ),
+                    );
+                  },
+                  child: SvgPicture.asset("assets/icons/back.svg"),
+                ),
                 Text("profile", style: kAppbarTitleText),
                 SvgPicture.asset("assets/icons/menu.svg"),
               ],

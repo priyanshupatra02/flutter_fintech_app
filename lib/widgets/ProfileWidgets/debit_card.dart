@@ -55,7 +55,7 @@ class BuildDebitCard extends StatelessWidget {
           Container(
             alignment: Alignment.center,
             padding: kQuatPad,
-            height: getDeviceHeight(20),
+            height: getDeviceHeight(25),
             width: getDeviceWidth(60),
             decoration: BoxDecoration(
               color: kSecondaryLightColor,

@@ -30,7 +30,7 @@ class _AddMoneyToWalletState extends State<AddMoneyToWallet> {
                     Navigator.pop(
                       context,
                       MaterialPageRoute(
-                        builder: (BuildContext context) => const ShowContacts(),
+                        builder: (BuildContext context) => const Home(),
                       ),
                     );
                   },

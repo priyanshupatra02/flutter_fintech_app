@@ -25,10 +25,20 @@ class _HomePageState extends State<HomePage> {
             CircleAvatar(
               radius: getDeviceWidth(27),
               backgroundColor: kSecondaryColor,
-              child: CircleAvatar(
-                radius: getDeviceWidth(25),
-                backgroundImage: const NetworkImage(
-                  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => const ProfilePage(),
+                    ),
+                  );
+                },
+                child: CircleAvatar(
+                  radius: getDeviceWidth(25),
+                  backgroundImage: const NetworkImage(
+                    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
+                  ),
                 ),
               ),
             ),
@@ -153,41 +163,51 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   _buildPayCards(
                     text: "send\nmoney",
-                    icon:SvgPicture.asset(
+                    icon: SvgPicture.asset(
                       "assets/icons/send-money.svg",
                       color: kSecondaryColor.withOpacity(0.5),
                     ),
-                   onTap:  () {
-                     Navigator.push(
+                    onTap: () {
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (BuildContext context) =>
                               const ShowContacts(),
                         ),
                       );
-                   },
+                    },
                   ),
                   _buildPayCards(
-                     text:  "request\nmoney",
-                     icon: SvgPicture.asset(
-                        "assets/icons/receive-money.svg",
-                        color: kSecondaryColor.withOpacity(0.5),
-                      ),
-                      onTap: () {
-                        Navigator.push(
+                    text: "request\nmoney",
+                    icon: SvgPicture.asset(
+                      "assets/icons/receive-money.svg",
+                      color: kSecondaryColor.withOpacity(0.5),
+                    ),
+                    onTap: () {
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (BuildContext context) => const ShowContacts(),
+                          builder: (BuildContext context) =>
+                              const ShowContacts(),
                         ),
                       );
-                      },),
+                    },
+                  ),
                   _buildPayCards(
                     text: "add\nmoney",
                     icon: SvgPicture.asset(
                       "assets/icons/add-money-to-wallet.svg",
                       color: kSecondaryColor.withOpacity(0.5),
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const AddMoneyToWallet(),
+                        ),
+                      );
+                    },
                   ),
                 ],
               ),
@@ -299,7 +319,8 @@ Widget _buildFavoriteMenu() {
 }
 
 // send/receive money cards
-Widget _buildPayCards({required String text, required Widget icon, void Function()? onTap}) {
+Widget _buildPayCards(
+    {required String text, required Widget icon, void Function()? onTap}) {
   return GestureDetector(
     onTap: onTap,
     child: Container(
