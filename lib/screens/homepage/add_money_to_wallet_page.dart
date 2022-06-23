@@ -30,7 +30,7 @@ class _AddMoneyToWalletState extends State<AddMoneyToWallet> {
                     Navigator.pop(
                       context,
                       MaterialPageRoute(
-                        builder: (BuildContext context) => const Home(),
+                        builder: (BuildContext context) => const HomePage(),
                       ),
                     );
                   },
@@ -89,7 +89,14 @@ class _AddMoneyToWalletState extends State<AddMoneyToWallet> {
           ),
         ),
       ),
-      bottomSheet: Column(
+      bottomSheet: _buildBottomSheet(),
+    );
+  }
+
+  // bottom pay using sheet
+
+  Widget? _buildBottomSheet(){
+    return Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Divider(
@@ -197,11 +204,13 @@ class _AddMoneyToWalletState extends State<AddMoneyToWallet> {
             ),
           ),
         ],
-      ),
-    );
+      );
   }
 
-  DropdownMenuItem<String> buildDropDownMenuItem(String item) =>
+
+
+
+  DropdownMenuItem<String> buildDropDownMenuItem(String item) => 
       DropdownMenuItem(
         value: item,
         child: Text(
