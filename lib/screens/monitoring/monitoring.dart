@@ -11,6 +11,7 @@ class _MonitoringPageState extends State<MonitoringPage> {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
+
     return Scaffold(
       appBar: CustomAppBar(
         title: "expense\ntracker.",
@@ -27,13 +28,52 @@ class _MonitoringPageState extends State<MonitoringPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            LineChartSample2(),
+            const LineChartWidget(),
             Align(
               alignment: Alignment.center,
               child: Container(
-                color: Colors.grey,
-                height: 30,
-                width: getDeviceWidth(300),
+                padding: kQuatPad,
+                margin: kSinglePad,
+                decoration: BoxDecoration(
+                  color: kTileColor,
+                  borderRadius: kQuatCurve,
+                ),
+                // width: getDeviceWidth(320),
+                // height: getDeviceWidth(30),
+
+                child: DefaultTabController(
+                  length: 3,
+                  child: Column(
+                    children: [
+                      TabBar(
+                        enableFeedback: true,
+                        labelStyle: GoogleFonts.poppins(
+                          fontSize: getDeviceWidth(12),
+                          fontWeight: FontWeight.w500,
+                          letterSpacing: getDeviceWidth(0.5),
+                        ),
+                        indicator: BoxDecoration(
+                          color: kIconBgColor,
+                          borderRadius: kQuatCurve,
+                        ),
+                        tabs: [
+                          Tab(
+                            height: getDeviceHeight(25),
+                            text: "weekly",
+                          ),
+                          Tab(
+                            height: getDeviceHeight(25),
+                            text: "monthly",
+                          ),
+                          Tab(
+                            height: getDeviceHeight(25),
+                            text: "yearly",
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
           ],

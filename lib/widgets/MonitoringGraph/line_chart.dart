@@ -1,18 +1,18 @@
 import 'package:flutter_fintech_app/utilities/import.dart';
 
-class LineChartSample2 extends StatefulWidget {
-  const LineChartSample2({Key? key}) : super(key: key);
+class LineChartWidget extends StatefulWidget {
+  const LineChartWidget({Key? key}) : super(key: key);
 
   @override
-  _LineChartSample2State createState() => _LineChartSample2State();
+  _LineChartWidgetState createState() => _LineChartWidgetState();
 }
 
-class _LineChartSample2State extends State<LineChartSample2> {
+class _LineChartWidgetState extends State<LineChartWidget> {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Stack(
-      children: <Widget>[
+      children: [
         SizedBox(
           height: getDeviceHeight(450),
           width: getDeviceWidth(350),
