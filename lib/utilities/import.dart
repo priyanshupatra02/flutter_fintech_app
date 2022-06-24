@@ -18,6 +18,8 @@ export 'package:smooth_page_indicator/smooth_page_indicator.dart';
 export 'package:provider/provider.dart';
 export 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
 export 'package:flutter_contacts/flutter_contacts.dart';
+export 'package:fl_chart/fl_chart.dart';
+
 
 // Screens
 export 'package:flutter_fintech_app/main.dart';
@@ -50,5 +52,7 @@ export 'package:flutter_fintech_app/widgets/PaymentHistoryWidgets/your_bills_car
 export 'package:flutter_fintech_app/widgets/PaymentHistoryWidgets/pay_bills_category.dart';
 export 'package:flutter_fintech_app/widgets/dashed_rect.dart';
 export 'package:flutter_fintech_app/widgets/ProfileWidgets/debit_card.dart';
+export 'package:flutter_fintech_app/widgets/MonitoringGraph/line_chart.dart';
+
 
 

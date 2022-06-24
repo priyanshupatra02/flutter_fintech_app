@@ -54,8 +54,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    return const Scaffold(
-      body: Home(),
+    return Scaffold(
+      body: MonitoringPage(),
     );
   }
 }

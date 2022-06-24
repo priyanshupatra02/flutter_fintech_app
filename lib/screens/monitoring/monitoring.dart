@@ -1,6 +1,5 @@
 import 'package:flutter_fintech_app/utilities/import.dart';
 
-
 class MonitoringPage extends StatefulWidget {
   const MonitoringPage({Key? key}) : super(key: key);
 
@@ -11,9 +10,34 @@ class MonitoringPage extends StatefulWidget {
 class _MonitoringPageState extends State<MonitoringPage> {
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Scaffold(
-      body: Center(
-        child: Text("monitoring"),
+      appBar: CustomAppBar(
+        title: "expense\ntracker.",
+        onTap: () {
+          Navigator.pop(
+            context,
+            MaterialPageRoute(
+              builder: (BuildContext context) => const Home(),
+            ),
+          );
+        },
+        showBackButton: true,
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            LineChartSample2(),
+            Align(
+              alignment: Alignment.center,
+              child: Container(
+                color: Colors.grey,
+                height: 30,
+                width: getDeviceWidth(300),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
