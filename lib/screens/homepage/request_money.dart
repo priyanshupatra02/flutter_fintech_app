@@ -107,6 +107,7 @@ class RequestMoneyPage extends StatelessWidget {
                 minWidth: getDeviceWidth(230),
                 minHeight: getDeviceHeight(45),
                 labelText: "request money.",
+                onPressed: () {},
               ),
             ],
           ),

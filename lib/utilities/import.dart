@@ -20,7 +20,6 @@ export 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
 export 'package:flutter_contacts/flutter_contacts.dart';
 export 'package:fl_chart/fl_chart.dart';
 
-
 // Screens
 export 'package:flutter_fintech_app/main.dart';
 export 'package:flutter_fintech_app/screens/onboarding_screen/onboarding.dart';
@@ -34,7 +33,6 @@ export 'package:flutter_fintech_app/screens/homepage/request_money.dart';
 export 'package:flutter_fintech_app/screens/homepage/show_contacts.dart';
 export 'package:flutter_fintech_app/screens/homepage/send_money.dart';
 export 'package:flutter_fintech_app/screens/homepage/add_money_to_wallet_page.dart';
-
 
 // nav bar destinations
 export 'package:flutter_fintech_app/screens/cards/cards.dart';
@@ -53,6 +51,4 @@ export 'package:flutter_fintech_app/widgets/PaymentHistoryWidgets/pay_bills_cate
 export 'package:flutter_fintech_app/widgets/dashed_rect.dart';
 export 'package:flutter_fintech_app/widgets/ProfileWidgets/debit_card.dart';
 export 'package:flutter_fintech_app/widgets/MonitoringGraph/line_chart.dart';
-
-
-
+export 'package:flutter_fintech_app/widgets/bottom_sheet.dart';

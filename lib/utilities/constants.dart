@@ -63,6 +63,13 @@ const Color kSecondaryDeepTextColor =
 const Color kInfoTextColor = Color(0xFF83838F); // For onboarding screen texts.
 
 // Text styles
+
+TextStyle kSnackBarMessage = GoogleFonts.poppins(
+  fontSize: getDeviceWidth(11),
+  letterSpacing: getDeviceWidth(0.75),
+  fontWeight: FontWeight.w400,
+); // used displaying snackbar errors.
+
 TextStyle kHeadingText = GoogleFonts.poppins(
   fontSize: getDeviceWidth(17),
   letterSpacing: getDeviceWidth(0.5),
@@ -207,6 +214,24 @@ TextStyle contactNumberTextStyle = GoogleFonts.poppins(
   fontSize: getDeviceWidth(12),
   letterSpacing: getDeviceWidth(1),
   fontWeight: FontWeight.w400, //medium
+);
+
+// Textstyle for registration page
+TextStyle kBottomSheetHeading = GoogleFonts.poppins(
+  fontSize: getDeviceWidth(32),
+  letterSpacing: getDeviceWidth(0.5),
+  height: getDeviceHeight(1.1),
+  fontWeight: FontWeight.bold, //medium
+);
+TextStyle kPrimarySubtitleText = GoogleFonts.poppins(
+  fontSize: getDeviceWidth(10),
+  fontWeight: FontWeight.w400, //regular
+  color: kSecondaryLightTextColor,
+);
+TextStyle kSecondarySubtitleText = GoogleFonts.poppins(
+  fontSize: getDeviceWidth(9),
+  fontWeight: FontWeight.w400, //regular
+  color: kSecondaryLightTextColor,
 );
 
 //padding

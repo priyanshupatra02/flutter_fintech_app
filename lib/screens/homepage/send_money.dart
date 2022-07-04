@@ -121,122 +121,109 @@ class _SendMoneyPageState extends State<SendMoneyPage> {
           ),
         ),
       ),
-      bottomSheet: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Divider(
-            color: kSecondaryLightColor,
-            height: getDeviceHeight(20),
-            thickness: 3,
-            indent: getDeviceWidth(150),
-            endIndent: getDeviceWidth(150),
-          ),
-          Container(
-            padding: kSinglePad,
-            height: getDeviceHeight(270),
-            width: double.infinity,
-            color: kTileColor,
-            child: Column(
-             crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "pay using",
-                  style: kHeadingText,
-                ),
-                SizedBox(height: getDeviceHeight(10)),
-                RadioListTile<int>(
-                  value: 1,
-                  groupValue: selectedValue,
-                  title: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+      bottomSheet: BottomSheetCard(
+        height: getDeviceHeight(270),
+        padding: kSinglePad,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "pay using",
+              style: kHeadingText,
+            ),
+            SizedBox(height: getDeviceHeight(10)),
+            RadioListTile<int>(
+              value: 1,
+              groupValue: selectedValue,
+              title: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "bank account",
+                    style: contactNameTextStyle,
+                  ),
+                  Row(
                     children: [
-                      Text(
-                        "bank account",
-                        style: contactNameTextStyle,
-                      ),
-                      Row(
-                        children: [
-                          SvgPicture.asset("assets/logos/axis-bank-logo-2.svg"),
-                          SizedBox(width: getDeviceWidth(10)),
-                          SizedBox(
-                            width: getDeviceWidth(110),
-                            child: DropdownButtonHideUnderline(
-                              child: DropdownButton<String>(
-                                dropdownColor: kIconBgColor,
-                                hint: Text(
-                                  "Select bank account",
-                                  overflow: TextOverflow.ellipsis,
-                                  style: GoogleFonts.poppins(
-                                    fontSize: getDeviceWidth(12),
-                                    fontWeight: FontWeight.w400,
-                                    color: kDropDownItemColor.withOpacity(0.5),
-                                  ),
-                                ),
-                                isExpanded: true,
-                                value: value,
-                                style: GoogleFonts.poppins(
-                                  fontSize: getDeviceWidth(12),
-                                  fontWeight: FontWeight.w500,
-                                  color: kDropDownItemColor,
-                                ),
-                                items: dropDownItems
-                                    .map(buildDropDownMenuItem)
-                                    .toList(),
-                                onChanged: (value) {
-                                  setState(
-                                    () {
-                                      this.value = value;
-                                    },
-                                  );
-                                },
+                      SvgPicture.asset("assets/logos/axis-bank-logo-2.svg"),
+                      SizedBox(width: getDeviceWidth(10)),
+                      SizedBox(
+                        width: getDeviceWidth(110),
+                        child: DropdownButtonHideUnderline(
+                          child: DropdownButton<String>(
+                            dropdownColor: kIconBgColor,
+                            hint: Text(
+                              "Select bank account",
+                              overflow: TextOverflow.ellipsis,
+                              style: GoogleFonts.poppins(
+                                fontSize: getDeviceWidth(12),
+                                fontWeight: FontWeight.w400,
+                                color: kDropDownItemColor.withOpacity(0.5),
                               ),
                             ),
-                          ),
-                          SizedBox(width: getDeviceWidth(10)),
-                          TextButton(
-                            //TODO: remove splash effect
-                            onPressed: () {},
-                            child: const Text(
-                              "check balance",
-                              style: TextStyle(color: kSecondaryLightTextColor),
+                            isExpanded: true,
+                            value: value,
+                            style: GoogleFonts.poppins(
+                              fontSize: getDeviceWidth(12),
+                              fontWeight: FontWeight.w500,
+                              color: kDropDownItemColor,
                             ),
+                            items: dropDownItems
+                                .map(buildDropDownMenuItem)
+                                .toList(),
+                            onChanged: (value) {
+                              setState(
+                                () {
+                                  this.value = value;
+                                },
+                              );
+                            },
                           ),
-                        ],
+                        ),
+                      ),
+                      SizedBox(width: getDeviceWidth(10)),
+                      TextButton(
+                        //TODO: remove splash effect
+                        onPressed: () {},
+                        child: const Text(
+                          "check balance",
+                          style: TextStyle(color: kSecondaryLightTextColor),
+                        ),
                       ),
                     ],
                   ),
-                  onChanged: (value) => setState(() => selectedValue = value),
-                ),
-                RadioListTile<int>(
-                  value: 2,
-                  groupValue: selectedValue,
-                  title: Text(
-                    "wallet",
-                    style: contactNameTextStyle,
-                  ),
-                  subtitle: Text(
-                    "${rupee} 2,777",
-                    style: GoogleFonts.poppins(
-                      fontSize: getDeviceWidth(12),
-                      fontWeight: FontWeight.w500,
-                      color: kDropDownItemColor,
-                    ),
-                  ),
-                  onChanged: (value) => setState(() => selectedValue = value),
-                ),
-                Align(
-                  alignment: Alignment.center,
-                  child: ActionButton(
-                    minWidth: getDeviceWidth(250),
-                    minHeight: getDeviceHeight(45),
-                    labelText: "send money.",
-                    enableShadow: false,
-                  ),
-                ),
-              ],
+                ],
+              ),
+              onChanged: (value) => setState(() => selectedValue = value),
             ),
-          ),
-        ],
+            RadioListTile<int>(
+              value: 2,
+              groupValue: selectedValue,
+              title: Text(
+                "wallet",
+                style: contactNameTextStyle,
+              ),
+              subtitle: Text(
+                "${rupee} 2,777",
+                style: GoogleFonts.poppins(
+                  fontSize: getDeviceWidth(12),
+                  fontWeight: FontWeight.w500,
+                  color: kDropDownItemColor,
+                ),
+              ),
+              onChanged: (value) => setState(() => selectedValue = value),
+            ),
+            Align(
+              alignment: Alignment.center,
+              child: ActionButton(
+                minWidth: getDeviceWidth(250),
+                minHeight: getDeviceHeight(45),
+                labelText: "send money.",
+                enableShadow: false,
+                onPressed: () {},
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

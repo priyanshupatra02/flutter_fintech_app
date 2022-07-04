@@ -1,3 +1,4 @@
+import 'package:flutter_fintech_app/screens/onboarding_screen/registration.dart';
 import 'package:flutter_fintech_app/utilities/import.dart';
 
 void main() {
@@ -24,6 +25,11 @@ class MyApp extends StatelessWidget {
         primaryTextTheme: Typography(platform: TargetPlatform.iOS).white,
         textTheme: Typography(platform: TargetPlatform.iOS).white,
         splashColor: Colors.transparent,
+        checkboxTheme: CheckboxThemeData(
+          fillColor: MaterialStateProperty.resolveWith(
+            (states) => kSecondaryLightColor,
+          ),
+        ),
         radioTheme: RadioThemeData(
           fillColor: MaterialStateColor.resolveWith(
             (states) => kSecondaryColor,
@@ -55,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-      body: MonitoringPage(),
+      body: RegistrationPage(),
     );
   }
 }

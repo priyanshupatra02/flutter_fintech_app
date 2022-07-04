@@ -38,9 +38,6 @@ class _MonitoringPageState extends State<MonitoringPage> {
                   color: kTileColor,
                   borderRadius: kQuatCurve,
                 ),
-                // width: getDeviceWidth(320),
-                // height: getDeviceWidth(30),
-
                 child: DefaultTabController(
                   length: 3,
                   child: Column(

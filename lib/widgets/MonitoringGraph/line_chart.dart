@@ -4,10 +4,10 @@ class LineChartWidget extends StatefulWidget {
   const LineChartWidget({Key? key}) : super(key: key);
 
   @override
-  _LineChartWidgetState createState() => _LineChartWidgetState();
+  LineChartWidgetState createState() => LineChartWidgetState();
 }
 
-class _LineChartWidgetState extends State<LineChartWidget> {
+class LineChartWidgetState extends State<LineChartWidget> {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -15,16 +15,13 @@ class _LineChartWidgetState extends State<LineChartWidget> {
       children: [
         SizedBox(
           height: getDeviceHeight(450),
-          width: getDeviceWidth(350),
           child: Container(
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.all(
-                Radius.circular(18),
-              ),
+            decoration: BoxDecoration(
+              borderRadius: kHalfCurve,
             ),
             child: Padding(
               padding: EdgeInsets.symmetric(
-                horizontal: getDeviceWidth(15),
+                horizontal: getDeviceWidth(30),
                 vertical: getDeviceHeight(25),
               ),
               child: LineChart(

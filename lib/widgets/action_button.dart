@@ -3,29 +3,35 @@ import 'package:flutter_fintech_app/utilities/import.dart';
 // A custom gradient action button
 class ActionButton extends StatelessWidget {
   final bool enableShadow;
+  final BorderRadiusGeometry? borderRadius;
   final String labelText;
   final double minWidth, minHeight;
+  final VoidCallback onPressed;
+
   const ActionButton({
     Key? key,
     this.enableShadow = true,
-    required this.minWidth,
-    required this.minHeight,
     required this.labelText,
+    required this.onPressed,
+    this.borderRadius,
+    this.minWidth = 220,
+    this.minHeight = 45.0,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final borderRadius = this.borderRadius ?? kQuatCurve;
     return DecoratedBox(
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
             color: enableShadow ? kShadowPrimaryLight : Colors.transparent,
             blurRadius: 35,
-            offset: Offset(0, 7), // changes position of shadow
+            offset: const Offset(0, 7), // changes position of shadow
           ),
         ],
         gradient: kSecondaryGradientColor,
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: borderRadius,
       ),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
@@ -38,7 +44,7 @@ class ActionButton extends StatelessWidget {
             borderRadius: kHalfCurve,
           ),
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Text(
           labelText,
           style: buttonText,
