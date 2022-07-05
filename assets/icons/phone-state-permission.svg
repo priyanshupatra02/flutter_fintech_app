@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="37" viewBox="0 0 40 37">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_596" data-name="Group 596" transform="translate(-8534 -336)">
+    <g id="Group_433" data-name="Group 433" transform="translate(8534 336)">
+      <g id="Rectangle_261" data-name="Rectangle 261" fill="none" stroke="#fff" stroke-width="1" opacity="0.5">
+        <rect width="40" height="37" stroke="none"/>
+        <rect x="0.5" y="0.5" width="39" height="36" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_520" data-name="Group 520" transform="translate(8537 336)">
+      <g id="Light" transform="translate(0 0)">
+        <rect id="Rectangle_1606" data-name="Rectangle 1606" width="25" height="1" rx="0.5" transform="translate(3.999)" fill="#fff"/>
+        <path id="Path_1078" data-name="Path 1078" d="M43.174,47l-5.13,30h34L65.712,47Z" transform="translate(-38.044 -47)" opacity="0.5" fill="url(#linear-gradient)"/>
+      </g>
+      <g id="sim-card" transform="translate(13 10)" opacity="0.5">
+        <path id="Path_1168" data-name="Path 1168" d="M2.129,4.435H4.973a.687.687,0,0,1,.685.685V7.728a.687.687,0,0,1-.685.685H2.129a.687.687,0,0,1-.685-.685V5.119a.686.686,0,0,1,.685-.684ZM.668.01H4.18a.854.854,0,0,1,.367.04.866.866,0,0,1,.29.235l.105.108c.323.324.619.631.916.937s.577.6.886.906c.055.055.1.1.142.139a.822.822,0,0,1,.22.27.926.926,0,0,1,.045.4V8.924a.668.668,0,0,1-.668.668H.668A.668.668,0,0,1,0,8.923V.677A.668.668,0,0,1,.668.01Zm3.36.459H.668A.21.21,0,0,0,.459.677V8.923a.205.205,0,0,0,.062.147.208.208,0,0,0,.147.062H6.483a.21.21,0,0,0,.209-.209V3.176c0-.083,0-.034,0-.131a.973.973,0,0,0-.008-.22A.76.76,0,0,0,6.568,2.7c-.04-.038-.088-.085-.149-.146-.313-.315-.6-.612-.889-.91s-.593-.613-.912-.933L4.509.6a.813.813,0,0,0-.138-.13A.821.821,0,0,0,4.185.467l-.158,0Zm.3,4.311h0v.944h.989v-.6a.341.341,0,0,0-.34-.34Zm.99,1.3h-.99v.645h.989V6.081Zm0,1h-.99v.985h.649a.341.341,0,0,0,.34-.34V7.084ZM3.98,8.068V6.956a.187.187,0,0,1,0-.1v-.9a.187.187,0,0,1,0-.1V4.781H2.129a.341.341,0,0,0-.34.34v.606H2.911a.172.172,0,0,1,.172.172v.941a.19.19,0,0,1,.005.043.158.158,0,0,1-.005.043V8.069h.9Zm-2.191-2V6.7h.95V6.069Zm0,.992v.668a.341.341,0,0,0,.34.34h.61V7.061Z" transform="translate(0 -0.009)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

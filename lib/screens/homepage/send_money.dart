@@ -215,8 +215,7 @@ class _SendMoneyPageState extends State<SendMoneyPage> {
             Align(
               alignment: Alignment.center,
               child: ActionButton(
-                minWidth: getDeviceWidth(250),
-                minHeight: getDeviceHeight(45),
+                isBorder: false,
                 labelText: "send money.",
                 enableShadow: false,
                 onPressed: () {},

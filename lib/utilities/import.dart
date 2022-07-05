@@ -1,10 +1,13 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_fintech_app/utilities/size_config.dart';
+
 // System packages
 export 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
 export 'package:flutter/services.dart';
 export 'package:flutter/foundation.dart';
-// export 'package:flutter/cupertino.dart';
 export 'dart:typed_data';
 export 'dart:math';
+export 'package:flutter/services.dart';
 
 // Utilities
 export 'package:flutter_fintech_app/utilities/size_config.dart';
@@ -33,6 +36,8 @@ export 'package:flutter_fintech_app/screens/homepage/request_money.dart';
 export 'package:flutter_fintech_app/screens/homepage/show_contacts.dart';
 export 'package:flutter_fintech_app/screens/homepage/send_money.dart';
 export 'package:flutter_fintech_app/screens/homepage/add_money_to_wallet_page.dart';
+export 'package:flutter_fintech_app/screens/onboarding_screen/Registration/registration_1.dart';
+export 'package:flutter_fintech_app/screens/onboarding_screen/Registration/registration_2.dart';
 
 // nav bar destinations
 export 'package:flutter_fintech_app/screens/cards/cards.dart';
@@ -52,3 +57,9 @@ export 'package:flutter_fintech_app/widgets/dashed_rect.dart';
 export 'package:flutter_fintech_app/widgets/ProfileWidgets/debit_card.dart';
 export 'package:flutter_fintech_app/widgets/MonitoringGraph/line_chart.dart';
 export 'package:flutter_fintech_app/widgets/bottom_sheet.dart';
+export 'package:flutter_fintech_app/screens/onboarding_screen/Registration/registration_otpform.dart';
+
+Widget? scaffoldBgImage = Image.asset(
+  "assets/images/hello-image.png",
+  scale: getDeviceWidth(1.6),
+);

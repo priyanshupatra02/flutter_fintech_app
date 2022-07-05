@@ -1,4 +1,4 @@
-import 'package:flutter_fintech_app/screens/onboarding_screen/registration.dart';
+import 'package:flutter_fintech_app/screens/onboarding_screen/Registration/registration_3.dart';
 import 'package:flutter_fintech_app/utilities/import.dart';
 
 void main() {
@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-      body: RegistrationPage(),
+      body: RegistrationPage3(),
     );
   }
 }

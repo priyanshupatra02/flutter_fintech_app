@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="37" viewBox="0 0 38 37">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_597" data-name="Group 597" transform="translate(-8534 -336)">
+    <g id="Group_433" data-name="Group 433" transform="translate(8527 336)">
+      <g id="Rectangle_261" data-name="Rectangle 261" transform="translate(7)" fill="none" stroke="#fff" stroke-width="1" opacity="0.5">
+        <rect width="38" height="37" stroke="none"/>
+        <rect x="0.5" y="0.5" width="37" height="36" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_520" data-name="Group 520" transform="translate(0.325)">
+      <g id="Light" transform="translate(8533.488 336)">
+        <rect id="Rectangle_1606" data-name="Rectangle 1606" width="23" height="1" rx="0.5" transform="translate(7.194)" fill="#fff"/>
+        <path id="Path_1078" data-name="Path 1078" d="M42.872,47,38.044,75h32L64.085,47Z" transform="translate(-34.857 -46.846)" opacity="0.5" fill="url(#linear-gradient)"/>
+      </g>
+      <path id="comment" d="M2.078,7.556,3.389,6.3a.264.264,0,0,1,.181-.073H7.687a.148.148,0,0,0,.148-.148V.674a.148.148,0,0,0-.044-.1.15.15,0,0,0-.1-.044H.674A.154.154,0,0,0,.525.674v5.4a.15.15,0,0,0,.149.148H1.816a.263.263,0,0,1,.262.263V7.556ZM1.953,4.363a.263.263,0,0,1,0-.526H5.591a.263.263,0,1,1,0,.526Zm0-1.706a.263.263,0,1,1,0-.525H6.414a.263.263,0,0,1,0,.525ZM3.675,6.751l-1.666,1.6a.262.262,0,0,1-.456-.178V6.751H.674A.677.677,0,0,1,0,6.078V.674A.68.68,0,0,1,.674,0H7.687a.677.677,0,0,1,.674.674v5.4a.676.676,0,0,1-.674.673Z" transform="translate(8548.675 346)" fill="#fff" opacity="0.5"/>
+    </g>
+  </g>
+</svg>

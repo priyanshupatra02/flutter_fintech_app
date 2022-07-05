@@ -179,10 +179,9 @@ Widget onboardingPage4() {
                   ),
                 ),
               ),
-               ActionButton(
+              ActionButton(
+                isBorder: false,
                 labelText: "Get Started.",
-                minWidth: 255,
-                minHeight: 60,
                 onPressed: () {},
               ),
             ],

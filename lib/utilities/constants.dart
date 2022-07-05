@@ -9,6 +9,7 @@ const Color kIconColor = Color(0xFF959595);
 const Color kIconBgColor = Color(0xFF222121);
 const Color kTileColor = Color(0xFF3D3C3C);
 const Color kBorderColor = Color(0xFFFF006F);
+const Color kSecondaryBorderColor = Color(0xFF328AF5);
 const Color kAvatarBorderColor = Color(0xFF6C6C6C);
 Color kPageIndicator = Colors.grey.shade800;
 Color bottomNavBarColor = const Color(0xFF000000).withOpacity(0.3);
@@ -218,7 +219,7 @@ TextStyle contactNumberTextStyle = GoogleFonts.poppins(
 
 // Textstyle for registration page
 TextStyle kBottomSheetHeading = GoogleFonts.poppins(
-  fontSize: getDeviceWidth(32),
+  fontSize: getDeviceWidth(26),
   letterSpacing: getDeviceWidth(0.5),
   height: getDeviceHeight(1.1),
   fontWeight: FontWeight.bold, //medium

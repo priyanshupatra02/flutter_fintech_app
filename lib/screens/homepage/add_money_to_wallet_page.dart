@@ -171,10 +171,10 @@ class _AddMoneyToWalletState extends State<AddMoneyToWallet> {
             Align(
               alignment: Alignment.center,
               child: ActionButton(
-                minWidth: getDeviceWidth(250),
-                minHeight: getDeviceHeight(45),
+                isBorder: false,
                 labelText: "add money.",
-                enableShadow: false, onPressed: () {  },
+                enableShadow: false,
+                onPressed: () {},
               ),
             ),
           ],

@@ -103,9 +103,8 @@ class RequestMoneyPage extends StatelessWidget {
               ),
               SizedBox(height: getDeviceHeight(100)),
               ActionButton(
+                isBorder: false,
                 enableShadow: false,
-                minWidth: getDeviceWidth(230),
-                minHeight: getDeviceHeight(45),
                 labelText: "request money.",
                 onPressed: () {},
               ),

@@ -1,13 +1,13 @@
 import 'package:flutter_fintech_app/utilities/import.dart';
 
-class RegistrationPage extends StatefulWidget {
-  const RegistrationPage({Key? key}) : super(key: key);
+class RegistrationPage1 extends StatefulWidget {
+  const RegistrationPage1({Key? key}) : super(key: key);
 
   @override
-  State<RegistrationPage> createState() => _RegistrationPageState();
+  State<RegistrationPage1> createState() => _RegistrationPageState();
 }
 
-class _RegistrationPageState extends State<RegistrationPage> {
+class _RegistrationPageState extends State<RegistrationPage1> {
   //TextFormField state
   final _formKey = GlobalKey<FormState>();
 
@@ -17,17 +17,12 @@ class _RegistrationPageState extends State<RegistrationPage> {
   @override
   Widget build(BuildContext context) {
     // for checkbox
-    bool isChecked = false;
-    //for using it in multiple registration screens
-    Widget? scaffoldBgImage = Image.asset(
-      "assets/images/hello-image.png",
-      scale: getDeviceWidth(1.6),
-    );
+    bool isChecked = true;
     return Scaffold(
       body: SafeArea(
         child: Align(
           alignment: Alignment.topCenter,
-          child: scaffoldBgImage,
+          child: scaffoldBgImage, //declared in import.dart
         ),
       ),
       bottomSheet: BottomSheetCard(
@@ -116,6 +111,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 style: kSecondarySubtitleText,
               ),
               SizedBox(height: getDeviceHeight(20)),
+              //TODO: checkbox set state nto working properly
               Checkbox(
                 checkColor: kSecondaryColor,
                 value: isChecked,
@@ -158,8 +154,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 alignment: Alignment.center,
                 child: isChecked
                     ? ActionButton(
-                        minWidth: getDeviceWidth(250),
-                        minHeight: getDeviceHeight(50),
+                        isBorder: false,
                         labelText: "Agree & Continue",
                         onPressed: () {
                           if (!_formKey.currentState!.validate()) {
@@ -172,40 +167,41 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     : Opacity(
                         opacity: 0.5,
                         child: ActionButton(
-                          minWidth: getDeviceWidth(250),
-                          minHeight: getDeviceHeight(50),
+                          isBorder: false,
                           labelText: "Agree & Continue",
                           onPressed: () {
-                            setState(() {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
-                                  content: Row(
-                                    children: [
-                                      SvgPicture.asset(
-                                        "assets/icons/snackbar-info-icon.svg",
-                                      ),
-                                      SizedBox(width: getDeviceWidth(10)),
-                                      Text(
-                                        "Please agree to the terms & conditions.",
-                                        style: kSnackBarMessage,
-                                      ),
-                                      const Spacer(),
-                                      GestureDetector(
-                                        onTap: () {
-                                          setState(() {
-                                            ScaffoldMessenger.of(context)
-                                                .hideCurrentSnackBar();
-                                          });
-                                        },
-                                        child: SvgPicture.asset(
-                                          "assets/icons/close-snackbar.svg",
+                            setState(
+                              () {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Row(
+                                      children: [
+                                        SvgPicture.asset(
+                                          "assets/icons/snackbar-info-icon.svg",
                                         ),
-                                      ),
-                                    ],
+                                        SizedBox(width: getDeviceWidth(10)),
+                                        Text(
+                                          "Please agree to the terms & conditions.",
+                                          style: kSnackBarMessage,
+                                        ),
+                                        const Spacer(),
+                                        GestureDetector(
+                                          onTap: () {
+                                            setState(() {
+                                              ScaffoldMessenger.of(context)
+                                                  .hideCurrentSnackBar();
+                                            });
+                                          },
+                                          child: SvgPicture.asset(
+                                            "assets/icons/close-snackbar.svg",
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                              );
-                            });
+                                );
+                              },
+                            );
                           },
                         ),
                       ),

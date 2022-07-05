@@ -35,7 +35,10 @@ class _BottomSheetCardState extends State<BottomSheetCard> {
           height: widget.height,
           alignment: Alignment.center,
           width: double.infinity,
-          color: kTileColor,
+          decoration: BoxDecoration(
+            borderRadius: kHalfCurveVerticalTop,
+            color: kTileColor,
+          ),
           child: widget.child,
         ),
       ],
