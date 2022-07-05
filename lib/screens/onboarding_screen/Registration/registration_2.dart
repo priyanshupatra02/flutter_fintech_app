@@ -17,68 +17,64 @@ class RegistrationPage2 extends StatelessWidget {
       bottomSheet: BottomSheetCard(
         height: getDeviceHeight(550),
         padding: kSinglePad,
-        child: Expanded(
-          child: ListView(
-            scrollDirection: Axis.vertical,
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SvgPicture.asset(
-                    "assets/icons/back.svg",
-                    fit: BoxFit.scaleDown,
-                  ),
-                  SizedBox(height: getDeviceHeight(20)),
-                  Text(
-                    "we will take the following permissions.",
-                    style: kBottomSheetHeading,
-                  ),
-                  SizedBox(height: getDeviceHeight(20)),
-                  BuildPermissionCategories(
-                    icon: SvgPicture.asset(
-                      "assets/icons/phone-state-permission.svg",
-                      height: getDeviceHeight(50),
-                      width: getDeviceWidth(48),
-                    ),
-                    headingText: "phone state permission",
-                    isMandatory: true,
-                    subtitleText:
-                        "we need this permission to ensure the SIM card\nin your phone & your registered phone number\nmatch.",
-                  ),
-                  BuildPermissionCategories(
-                    icon: SvgPicture.asset(
-                      "assets/icons/sms-permission.svg",
-                      height: getDeviceHeight(50),
-                      width: getDeviceWidth(48),
-                    ),
-                    headingText: "sms permission",
-                    isMandatory: true,
-                    subtitleText:
-                        "we need this permission to activate UPI and\nsend you credit card payment reminders to\nprovide a seamless experience.",
-                  ),
-                  BuildPermissionCategories(
-                    icon: SvgPicture.asset(
-                      "assets/icons/location-permission.svg",
-                      height: getDeviceHeight(50),
-                      width: getDeviceWidth(48),
-                    ),
-                    headingText: "location permission",
-                    isMandatory: false,
-                    subtitleText:
-                        "we need this permission to intelligently surface\nlocation specific rewards, alerts & suggestions.",
-                  ),
-                  SizedBox(
-                    height: getDeviceHeight(50),
-                  ),
-                  Align(
-                    alignment: Alignment.bottomCenter,
-                    child: ActionButton(
-                      isBorder: false,
-                      labelText: "Grant permission",
-                      onPressed: () {},
-                    ),
-                  ),
-                ],
+              SvgPicture.asset(
+                "assets/icons/back.svg",
+                fit: BoxFit.scaleDown,
+              ),
+              SizedBox(height: getDeviceHeight(20)),
+              Text(
+                "we will take the following permissions.",
+                style: kBottomSheetHeading,
+              ),
+              SizedBox(height: getDeviceHeight(20)),
+              BuildPermissionCategories(
+                icon: SvgPicture.asset(
+                  "assets/icons/phone-state-permission.svg",
+                  height: getDeviceHeight(50),
+                  width: getDeviceWidth(48),
+                ),
+                headingText: "phone state permission",
+                isMandatory: true,
+                subtitleText:
+                    "we need this permission to ensure the SIM card\nin your phone & your registered phone number\nmatch.",
+              ),
+              BuildPermissionCategories(
+                icon: SvgPicture.asset(
+                  "assets/icons/sms-permission.svg",
+                  height: getDeviceHeight(50),
+                  width: getDeviceWidth(48),
+                ),
+                headingText: "sms permission",
+                isMandatory: true,
+                subtitleText:
+                    "we need this permission to activate UPI and\nsend you credit card payment reminders to\nprovide a seamless experience.",
+              ),
+              BuildPermissionCategories(
+                icon: SvgPicture.asset(
+                  "assets/icons/location-permission.svg",
+                  height: getDeviceHeight(50),
+                  width: getDeviceWidth(48),
+                ),
+                headingText: "location permission",
+                isMandatory: false,
+                subtitleText:
+                    "we need this permission to intelligently surface\nlocation specific rewards, alerts & suggestions.",
+              ),
+              SizedBox(
+                height: getDeviceHeight(50),
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: ActionButton(
+                  isBorder: false,
+                  labelText: "Grant permission",
+                  onPressed: () {},
+                ),
               ),
             ],
           ),

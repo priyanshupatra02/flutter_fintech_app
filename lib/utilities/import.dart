@@ -8,6 +8,7 @@ export 'package:flutter/foundation.dart';
 export 'dart:typed_data';
 export 'dart:math';
 export 'package:flutter/services.dart';
+export 'dart:async';
 
 // Utilities
 export 'package:flutter_fintech_app/utilities/size_config.dart';
@@ -58,6 +59,7 @@ export 'package:flutter_fintech_app/widgets/ProfileWidgets/debit_card.dart';
 export 'package:flutter_fintech_app/widgets/MonitoringGraph/line_chart.dart';
 export 'package:flutter_fintech_app/widgets/bottom_sheet.dart';
 export 'package:flutter_fintech_app/screens/onboarding_screen/Registration/registration_otpform.dart';
+export 'package:flutter_fintech_app/widgets/RegistrationPage/timer.dart';
 
 Widget? scaffoldBgImage = Image.asset(
   "assets/images/hello-image.png",

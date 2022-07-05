@@ -14,7 +14,8 @@ class OtpForm extends StatelessWidget {
           child: TextFormField(
             onChanged: (value) {
               if (value.length == 1) {
-                FocusScope.of(context).nextFocus();
+                FocusScope.of(context)
+                    .focusInDirection(TraversalDirection.right);
               }
             },
             onSaved: (pin1) {},
@@ -50,7 +51,8 @@ class OtpForm extends StatelessWidget {
           child: TextFormField(
             onChanged: (value) {
               if (value.length == 1) {
-                FocusScope.of(context).nextFocus();
+                FocusScope.of(context)
+                    .focusInDirection(TraversalDirection.right);
               }
             },
             onSaved: (pin2) {},
@@ -86,7 +88,8 @@ class OtpForm extends StatelessWidget {
           child: TextFormField(
             onChanged: (value) {
               if (value.length == 1) {
-                FocusScope.of(context).nextFocus();
+                FocusScope.of(context)
+                    .focusInDirection(TraversalDirection.right);
               }
             },
             onSaved: (pin3) {},
@@ -122,7 +125,8 @@ class OtpForm extends StatelessWidget {
           child: TextFormField(
             onChanged: (value) {
               if (value.length == 1) {
-                FocusScope.of(context).nextFocus();
+                FocusScope.of(context)
+                    .focusInDirection(TraversalDirection.right);
               }
             },
             onSaved: (pin4) {},

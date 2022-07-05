@@ -23,8 +23,7 @@ class ActionButton extends StatelessWidget {
         ? DecoratedBox(
             decoration: BoxDecoration(
               border: Border.all(
-                color: kSecondaryBorderColor,
-                width: getDeviceWidth(2.2),
+                color: kIconColor,
               ),
               borderRadius: borderRadius,
             ),
@@ -42,7 +41,7 @@ class ActionButton extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.symmetric(
                     horizontal: getDeviceWidth(15),
-                    vertical: getDeviceHeight(10),
+                    vertical: getDeviceHeight(15),
                   ),
                   child: Text(
                     labelText,
@@ -79,7 +78,7 @@ class ActionButton extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.symmetric(
                     horizontal: getDeviceWidth(15),
-                    vertical: getDeviceHeight(10),
+                    vertical: getDeviceHeight(15),
                   ),
                   child: Text(
                     labelText,
